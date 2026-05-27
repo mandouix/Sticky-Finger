@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0058C3D80EEB37ACEAC6E890 /* NoteToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8E125201D3257B82E357A7 /* NoteToolbar.swift */; };
+		2A8C766AB066440C8D3F69C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859477BE1437EB7CC66244D /* AppDelegate.swift */; };
+		2FE3C6C799ADD8C0E3A9A357 /* NoteBodyEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5918A50D99CA3FCDA8D4847 /* NoteBodyEditor.swift */; };
+		35E3BD5672BE9DFA7D810DBB /* NSWindow+Sticky.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B134727E6506061301F27B /* NSWindow+Sticky.swift */; };
+		3E4EE22207612B22128B3A0C /* AllNotesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6018EB4E4FBF6BE88A2406C /* AllNotesWindowController.swift */; };
+		64385496CCFB938FA8A338E6 /* StickyNoteWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279ABCC7C4FA95DACEE60A6 /* StickyNoteWindow.swift */; };
+		6BB7532E2615DB145C8504CF /* TiptapEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655AE1D1643F7408DE7FB00C /* TiptapEditor.swift */; };
+		7117DD2290383492C8DC4F9F /* NewStickyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D656F27C981395910DFAB0 /* NewStickyApp.swift */; };
+		7DA77765CB465472718CC966 /* NoteWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25CE4F6F5D46202AEA00921 /* NoteWindowController.swift */; };
+		86C8A5EE09C5C589DCBCC846 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB5A5F6855288603CD954D /* WindowManager.swift */; };
+		86D5F5945AE2711F7CA90D79 /* MarkdownTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28695A3E911F1B6B1290EDE3 /* MarkdownTheme.swift */; };
+		910097C4A3CA05BB0F957DFE /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A891E5320DE37045DF116DF6 /* NoteStore.swift */; };
+		9B97E865A6A017F5D68334AF /* AllNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E7DA0F0CF085C17435B633 /* AllNotesView.swift */; };
+		9EA2EBCA72BD2C8554EDCAD0 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3F1174A18557EFFE72D0A4 /* Note.swift */; };
+		BB64C8C4852618F24DDA0DE8 /* MarkdownTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7A69A8F53FCF8A3D8E56BA /* MarkdownTextStorage.swift */; };
+		BC0B9BC901BEB0F08EA5ED5F /* tiptap.min.js in Resources */ = {isa = PBXBuildFile; fileRef = C8288F0D13647BA67C4D6651 /* tiptap.min.js */; };
+		C7EAD158786E746511254088 /* editor.html in Resources */ = {isa = PBXBuildFile; fileRef = AF10E76D9B0B87581620FE2E /* editor.html */; };
+		CB1F878C20EDB6510349A3DA /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB390770D1159AC231DCA6F /* NoteView.swift */; };
+		D4E911A127BC40D1A8856163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2433E7666D45C8C4A9B2349F /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2433E7666D45C8C4A9B2349F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28695A3E911F1B6B1290EDE3 /* MarkdownTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTheme.swift; sourceTree = "<group>"; };
+		32D656F27C981395910DFAB0 /* NewStickyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStickyApp.swift; sourceTree = "<group>"; };
+		4859477BE1437EB7CC66244D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49E7DA0F0CF085C17435B633 /* AllNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotesView.swift; sourceTree = "<group>"; };
+		5F3F1174A18557EFFE72D0A4 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		655AE1D1643F7408DE7FB00C /* TiptapEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiptapEditor.swift; sourceTree = "<group>"; };
+		78BB5A5F6855288603CD954D /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
+		7D7A69A8F53FCF8A3D8E56BA /* MarkdownTextStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTextStorage.swift; sourceTree = "<group>"; };
+		8AB390770D1159AC231DCA6F /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		8D1DA746C1A8FC4D55CE4B8E /* New Sticky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New Sticky.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A142AA7271A174DF72E2CF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A891E5320DE37045DF116DF6 /* NoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStore.swift; sourceTree = "<group>"; };
+		AF10E76D9B0B87581620FE2E /* editor.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = editor.html; sourceTree = "<group>"; };
+		C8288F0D13647BA67C4D6651 /* tiptap.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = tiptap.min.js; sourceTree = "<group>"; };
+		CC8E125201D3257B82E357A7 /* NoteToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteToolbar.swift; sourceTree = "<group>"; };
+		D25CE4F6F5D46202AEA00921 /* NoteWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteWindowController.swift; sourceTree = "<group>"; };
+		D5918A50D99CA3FCDA8D4847 /* NoteBodyEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBodyEditor.swift; sourceTree = "<group>"; };
+		E5B134727E6506061301F27B /* NSWindow+Sticky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSWindow+Sticky.swift"; sourceTree = "<group>"; };
+		E6018EB4E4FBF6BE88A2406C /* AllNotesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotesWindowController.swift; sourceTree = "<group>"; };
+		F279ABCC7C4FA95DACEE60A6 /* StickyNoteWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyNoteWindow.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		11A3591C019A600368C37B2A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF10E76D9B0B87581620FE2E /* editor.html */,
+				C8288F0D13647BA67C4D6651 /* tiptap.min.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		37B547F568B0726996FA0A9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F3F1174A18557EFFE72D0A4 /* Note.swift */,
+				A891E5320DE37045DF116DF6 /* NoteStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		45552EA47F57F6AD8C914AE3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E5B134727E6506061301F27B /* NSWindow+Sticky.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		723CE01BC3D1ED20F99D6B80 /* New Sticky */ = {
+			isa = PBXGroup;
+			children = (
+				45552EA47F57F6AD8C914AE3 /* Extensions */,
+				C60A031AEABF5D2F08AE9E8A /* Markdown */,
+				37B547F568B0726996FA0A9A /* Models */,
+				11A3591C019A600368C37B2A /* Resources */,
+				85BDC4B87A548E74E4B35031 /* Views */,
+				F20AC3514979867D0A024923 /* Windows */,
+				4859477BE1437EB7CC66244D /* AppDelegate.swift */,
+				2433E7666D45C8C4A9B2349F /* Assets.xcassets */,
+				A142AA7271A174DF72E2CF60 /* Info.plist */,
+				32D656F27C981395910DFAB0 /* NewStickyApp.swift */,
+			);
+			path = "New Sticky";
+			sourceTree = "<group>";
+		};
+		7FA76532AD9E59106F077DCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1DA746C1A8FC4D55CE4B8E /* New Sticky.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85BDC4B87A548E74E4B35031 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49E7DA0F0CF085C17435B633 /* AllNotesView.swift */,
+				E6018EB4E4FBF6BE88A2406C /* AllNotesWindowController.swift */,
+				D5918A50D99CA3FCDA8D4847 /* NoteBodyEditor.swift */,
+				CC8E125201D3257B82E357A7 /* NoteToolbar.swift */,
+				8AB390770D1159AC231DCA6F /* NoteView.swift */,
+				655AE1D1643F7408DE7FB00C /* TiptapEditor.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C60A031AEABF5D2F08AE9E8A /* Markdown */ = {
+			isa = PBXGroup;
+			children = (
+				7D7A69A8F53FCF8A3D8E56BA /* MarkdownTextStorage.swift */,
+				28695A3E911F1B6B1290EDE3 /* MarkdownTheme.swift */,
+			);
+			path = Markdown;
+			sourceTree = "<group>";
+		};
+		D96795E6ADA1B28EE496D4BB = {
+			isa = PBXGroup;
+			children = (
+				723CE01BC3D1ED20F99D6B80 /* New Sticky */,
+				7FA76532AD9E59106F077DCE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F20AC3514979867D0A024923 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				D25CE4F6F5D46202AEA00921 /* NoteWindowController.swift */,
+				F279ABCC7C4FA95DACEE60A6 /* StickyNoteWindow.swift */,
+				78BB5A5F6855288603CD954D /* WindowManager.swift */,
+			);
+			path = Windows;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D58B587A7EE3D7E8D0B8DE06 /* New Sticky */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC169A4AC50A903795BF4E96 /* Build configuration list for PBXNativeTarget "New Sticky" */;
+			buildPhases = (
+				3D88A0F3D2D080F13F8B05B1 /* Sources */,
+				89844B7C87137D4DCF5F5D8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "New Sticky";
+			packageProductDependencies = (
+			);
+			productName = "New Sticky";
+			productReference = 8D1DA746C1A8FC4D55CE4B8E /* New Sticky.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08E6593FCC52AECFF6E3AA82 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 7C272B500768F7E519FB5F3D /* Build configuration list for PBXProject "New Sticky" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D96795E6ADA1B28EE496D4BB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7FA76532AD9E59106F077DCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D58B587A7EE3D7E8D0B8DE06 /* New Sticky */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89844B7C87137D4DCF5F5D8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4E911A127BC40D1A8856163 /* Assets.xcassets in Resources */,
+				C7EAD158786E746511254088 /* editor.html in Resources */,
+				BC0B9BC901BEB0F08EA5ED5F /* tiptap.min.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D88A0F3D2D080F13F8B05B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B97E865A6A017F5D68334AF /* AllNotesView.swift in Sources */,
+				3E4EE22207612B22128B3A0C /* AllNotesWindowController.swift in Sources */,
+				2A8C766AB066440C8D3F69C8 /* AppDelegate.swift in Sources */,
+				BB64C8C4852618F24DDA0DE8 /* MarkdownTextStorage.swift in Sources */,
+				86D5F5945AE2711F7CA90D79 /* MarkdownTheme.swift in Sources */,
+				35E3BD5672BE9DFA7D810DBB /* NSWindow+Sticky.swift in Sources */,
+				7117DD2290383492C8DC4F9F /* NewStickyApp.swift in Sources */,
+				9EA2EBCA72BD2C8554EDCAD0 /* Note.swift in Sources */,
+				2FE3C6C799ADD8C0E3A9A357 /* NoteBodyEditor.swift in Sources */,
+				910097C4A3CA05BB0F957DFE /* NoteStore.swift in Sources */,
+				0058C3D80EEB37ACEAC6E890 /* NoteToolbar.swift in Sources */,
+				CB1F878C20EDB6510349A3DA /* NoteView.swift in Sources */,
+				7DA77765CB465472718CC966 /* NoteWindowController.swift in Sources */,
+				64385496CCFB938FA8A338E6 /* StickyNoteWindow.swift in Sources */,
+				6BB7532E2615DB145C8504CF /* TiptapEditor.swift in Sources */,
+				86C8A5EE09C5C589DCBCC846 /* WindowManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		448CF3C519C7EA74DBB60772 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "New Sticky/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mandarchaudhari.newsticky;
+				PRODUCT_NAME = "New Sticky";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		5F8DC889EBA984D1E0DB6D85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		851D9F9ACDD96A6EF9BF47A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "New Sticky/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mandarchaudhari.newsticky;
+				PRODUCT_NAME = "New Sticky";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		EC4EFC8C1EC46D8A8793FE6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7C272B500768F7E519FB5F3D /* Build configuration list for PBXProject "New Sticky" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC4EFC8C1EC46D8A8793FE6A /* Debug */,
+				5F8DC889EBA984D1E0DB6D85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FC169A4AC50A903795BF4E96 /* Build configuration list for PBXNativeTarget "New Sticky" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				448CF3C519C7EA74DBB60772 /* Debug */,
+				851D9F9ACDD96A6EF9BF47A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08E6593FCC52AECFF6E3AA82 /* Project object */;
+}
