@@ -14,17 +14,52 @@ struct NoteToolbar: View {
                 isPinned = windowController?.window?.togglePin() ?? false
             }
 
-            ToolbarCircleButton(systemImage: "doc.on.doc", help: "All notes") {
-                WindowManager.shared.openAllNotes(sourceNoteID: noteID)
-            }
+            HStack(spacing: 0) {
+                Button {
+                    WindowManager.shared.openAllNotes(sourceNoteID: noteID)
+                } label: {
+                    Image(systemName: "doc.on.doc")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.primary)
+                        .frame(width: 36, height: 36)
+                }
+                .buttonStyle(.plain)
+                .pointerCursor()
+                .help("All notes")
 
-            ToolbarCircleButton(systemImage: "plus", help: "New note") {
-                let newNote = store.add()
-                let currentWindow = windowController?.window
-                let currentFrame = currentWindow?.frame
-                WindowManager.shared.open(newNote, at: currentFrame)
-                currentWindow?.close()
+                Rectangle()
+                    .fill(Color.primary.opacity(0.15))
+                    .frame(width: 0.5, height: 16)
+
+                Button {
+                    let newNote = store.add()
+                    if let currentFrame = windowController?.window?.frame {
+                        let gap: CGFloat = 12
+                        let screenFrame = windowController?.window?.screen?.visibleFrame
+                            ?? NSScreen.main?.visibleFrame
+                            ?? NSRect(x: 0, y: 0, width: 1440, height: 900)
+                        var x = currentFrame.maxX + gap
+                        if x + currentFrame.width > screenFrame.maxX {
+                            x = currentFrame.minX - gap - currentFrame.width
+                        }
+                        x = max(screenFrame.minX, x)
+                        let newFrame = NSRect(x: x, y: currentFrame.origin.y,
+                                             width: currentFrame.width, height: currentFrame.height)
+                        WindowManager.shared.open(newNote, at: newFrame)
+                    } else {
+                        WindowManager.shared.open(newNote)
+                    }
+                } label: {
+                    Image(systemName: "plus")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.primary)
+                        .frame(width: 36, height: 36)
+                }
+                .buttonStyle(.plain)
+                .pointerCursor()
+                .help("New note")
             }
+            .glassEffect(.regular, in: Capsule())
         }
         .onAppear {
             isPinned = windowController?.window?.isPinned ?? false
@@ -42,10 +77,11 @@ private struct ToolbarCircleButton: View {
             Image(systemName: systemImage)
                 .font(.system(size: 14, weight: .semibold))
                 .foregroundStyle(.primary)
-                .frame(width: 32, height: 32)
+                .frame(width: 36, height: 36)
         }
         .buttonStyle(.plain)
         .glassEffect(.regular, in: Circle())
+        .pointerCursor()
         .help(help)
     }
 }

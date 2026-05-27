@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0058C3D80EEB37ACEAC6E890 /* NoteToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8E125201D3257B82E357A7 /* NoteToolbar.swift */; };
+		B1A2C3D4E5F601020304AABD /* EditorBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2C3D4E5F601020304AABC /* EditorBridge.swift */; };
+		C1A2C3D4E5F601020304AABA /* FormatBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A2C3D4E5F601020304AABB /* FormatBar.swift */; };
 		2A8C766AB066440C8D3F69C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859477BE1437EB7CC66244D /* AppDelegate.swift */; };
 		2FE3C6C799ADD8C0E3A9A357 /* NoteBodyEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5918A50D99CA3FCDA8D4847 /* NoteBodyEditor.swift */; };
 		35E3BD5672BE9DFA7D810DBB /* NSWindow+Sticky.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B134727E6506061301F27B /* NSWindow+Sticky.swift */; };
@@ -36,6 +38,8 @@
 		49E7DA0F0CF085C17435B633 /* AllNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotesView.swift; sourceTree = "<group>"; };
 		5F3F1174A18557EFFE72D0A4 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		655AE1D1643F7408DE7FB00C /* TiptapEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiptapEditor.swift; sourceTree = "<group>"; };
+		B1A2C3D4E5F601020304AABC /* EditorBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorBridge.swift; sourceTree = "<group>"; };
+		C1A2C3D4E5F601020304AABB /* FormatBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatBar.swift; sourceTree = "<group>"; };
 		78BB5A5F6855288603CD954D /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
 		7D7A69A8F53FCF8A3D8E56BA /* MarkdownTextStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTextStorage.swift; sourceTree = "<group>"; };
 		8AB390770D1159AC231DCA6F /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 			children = (
 				49E7DA0F0CF085C17435B633 /* AllNotesView.swift */,
 				E6018EB4E4FBF6BE88A2406C /* AllNotesWindowController.swift */,
+				B1A2C3D4E5F601020304AABC /* EditorBridge.swift */,
+				C1A2C3D4E5F601020304AABB /* FormatBar.swift */,
 				D5918A50D99CA3FCDA8D4847 /* NoteBodyEditor.swift */,
 				CC8E125201D3257B82E357A7 /* NoteToolbar.swift */,
 				8AB390770D1159AC231DCA6F /* NoteView.swift */,
@@ -221,6 +227,8 @@
 				35E3BD5672BE9DFA7D810DBB /* NSWindow+Sticky.swift in Sources */,
 				7117DD2290383492C8DC4F9F /* NewStickyApp.swift in Sources */,
 				9EA2EBCA72BD2C8554EDCAD0 /* Note.swift in Sources */,
+				B1A2C3D4E5F601020304AABD /* EditorBridge.swift in Sources */,
+				C1A2C3D4E5F601020304AABA /* FormatBar.swift in Sources */,
 				2FE3C6C799ADD8C0E3A9A357 /* NoteBodyEditor.swift in Sources */,
 				910097C4A3CA05BB0F957DFE /* NoteStore.swift in Sources */,
 				0058C3D80EEB37ACEAC6E890 /* NoteToolbar.swift in Sources */,

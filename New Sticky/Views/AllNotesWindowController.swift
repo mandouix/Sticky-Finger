@@ -10,7 +10,8 @@ final class AllNotesWindowController: NSWindowController, NSWindowDelegate {
 
     var sourceNoteID: UUID = UUID()
     private let store: NoteStore
-    private var clickOutsideMonitor: Any?
+    private var clickOutsideMonitor: Any?   // global — catches clicks in other apps
+    private var clickLocalMonitor: Any?     // local  — catches clicks in this app (e.g. note window)
 
     init(store: NoteStore) {
         self.store = store
@@ -35,8 +36,7 @@ final class AllNotesWindowController: NSWindowController, NSWindowDelegate {
     required init?(coder: NSCoder) { fatalError() }
 
     private func updateContent() {
-        let radius = WindowManager.shared.noteWindowCornerRadius()
-        var view = AllNotesView(store: store, sourceNoteID: sourceNoteID, cornerRadius: radius)
+        var view = AllNotesView(store: store, sourceNoteID: sourceNoteID, cornerRadius: 24)
         view.onHeightChange = { [weak self] height in
             DispatchQueue.main.async { self?.resizePanel(toHeight: height) }
         }
@@ -74,19 +74,26 @@ final class AllNotesWindowController: NSWindowController, NSWindowDelegate {
 
     private func startMonitoringClickOutside() {
         stopMonitoringClickOutside()
-        clickOutsideMonitor = NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseDown, .rightMouseDown]) { [weak self] _ in
+        let handler: (NSEvent) -> Void = { [weak self] _ in
             guard let self, let win = self.window, win.isVisible else { return }
-            let mouse = NSEvent.mouseLocation
-            if !win.frame.contains(mouse) {
+            if !win.frame.contains(NSEvent.mouseLocation) {
                 DispatchQueue.main.async { win.close() }
             }
         }
+        clickOutsideMonitor = NSEvent.addGlobalMonitorForEvents(
+            matching: [.leftMouseDown, .rightMouseDown], handler: handler)
+        clickLocalMonitor = NSEvent.addLocalMonitorForEvents(
+            matching: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
+                handler(event)
+                return event
+            }
     }
 
     private func stopMonitoringClickOutside() {
-        if let monitor = clickOutsideMonitor {
-            NSEvent.removeMonitor(monitor)
-            clickOutsideMonitor = nil
+        [clickOutsideMonitor, clickLocalMonitor].forEach {
+            if let m = $0 { NSEvent.removeMonitor(m) }
         }
+        clickOutsideMonitor = nil
+        clickLocalMonitor = nil
     }
 }

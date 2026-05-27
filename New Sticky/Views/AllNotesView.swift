@@ -52,7 +52,9 @@ struct AllNotesView: View {
             }
             .padding(.horizontal, 10)
             .frame(height: allNotesSearchBarHeight)
+            .background(Color.primary.opacity(0.06), in: Capsule())
             .glassEffect(.regular, in: Capsule())
+            .overlay(Capsule().strokeBorder(Color.primary.opacity(0.12), lineWidth: 0.5))
 
             if !filtered.isEmpty {
                 ScrollView {
@@ -83,6 +85,7 @@ private struct NoteRow: View {
     let store: NoteStore
 
     @State private var isHovered = false
+    @State private var isTrashHovered = false
 
     var body: some View {
         HStack(spacing: 8) {
@@ -103,20 +106,29 @@ private struct NoteRow: View {
             .frame(maxWidth: .infinity, alignment: .leading)
 
             Button {
+                let wasSource = note.id == sourceNoteID
+                let sourceFrame = wasSource ? WindowManager.shared.frame(for: sourceNoteID) : nil
                 store.delete(id: note.id)
                 WindowManager.shared.close(noteID: note.id)
+                if wasSource {
+                    let newNote = NoteStore.shared.add()
+                    WindowManager.shared.open(newNote, at: sourceFrame)
+                }
             } label: {
                 Image(systemName: "trash")
                     .font(.system(size: 14))
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(isTrashHovered ? Color.red : Color.secondary)
                     .frame(width: 24, height: 24)
             }
             .buttonStyle(.plain)
+            .onHover { hover in
+                withAnimation(.easeInOut(duration: 0.15)) { isTrashHovered = hover }
+            }
         }
         .padding(.horizontal, 8)
         .frame(height: allNotesRowHeight)
         .background(isHovered ? Color.primary.opacity(0.07) : Color.clear)
-        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .clipShape(RoundedRectangle(cornerRadius: 16))
         .contentShape(Rectangle())
         .onHover { isHovered = $0 }
         .onTapGesture {

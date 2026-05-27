@@ -5,9 +5,9 @@ struct NoteView: View {
     let noteID: UUID
     @ObservedObject var store: NoteStore
     weak var windowController: NoteWindowController?
+    @ObservedObject var bridge: EditorBridge
 
     @State private var content: String = ""
-    @State private var isHovered = false
     @State private var editorHeight: CGFloat = 56
 
     private var note: Note? { store.note(id: noteID) }
@@ -15,17 +15,14 @@ struct NoteView: View {
     var body: some View {
         ZStack {
             Color.clear
-                .glassEffect(.regular, in: Rectangle())
+                .glassEffect(.regular, in: RoundedRectangle(cornerRadius: 24))
 
             // Main content column
             VStack(spacing: 0) {
-                // Toolbar row — 32pt high, top flush with window top so button
-                // centers sit at y=16pt, matching the repositioned traffic lights.
                 HStack(alignment: .center) {
-                    // Reserve 76pt for traffic lights (left edge at 16pt + 3×12pt buttons + gaps)
-                    Spacer().frame(width: 76, height: 1)
+                    Spacer().frame(width: 40, height: 1)
                     Spacer()
-                    if isHovered {
+                    if bridge.isWindowHovered {
                         NoteToolbar(
                             noteID: noteID,
                             store: store,
@@ -40,21 +37,20 @@ struct NoteView: View {
                 .padding(.trailing, 8)
                 .padding(.bottom, 16)
 
-                // Tiptap editor — grows with content; 30pt bottom pad reserves
-                // space so the fixed char-count footer never overlaps content.
-                TiptapEditor(text: $content, editorHeight: $editorHeight)
+                TiptapEditor(text: $content, editorHeight: $editorHeight, bridge: bridge)
                     .frame(height: editorHeight)
                     .padding(.horizontal, 16)
-                    .padding(.bottom, 30)
+                    .padding(.bottom, 34)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .ignoresSafeArea(.all, edges: .top)
 
-            // Character count — always pinned 16pt from left and bottom.
+            // Character count pinned to bottom
             VStack(spacing: 0) {
                 Spacer()
                 HStack {
                     Text("\(content.count) characters")
-                        .font(.system(size: 14))
+                        .font(.system(size: 13))
                         .foregroundStyle(.tertiary)
                     Spacer()
                 }
@@ -62,11 +58,20 @@ struct NoteView: View {
                 .padding(.bottom, 16)
             }
         }
-        .onHover { hovered in
-            withAnimation(.easeInOut(duration: 0.15)) {
-                isHovered = hovered
+        // Note title (shown when not hovered and no selection)
+        .overlay(alignment: .top) {
+            if !bridge.isWindowHovered && !bridge.state.visible {
+                Text(note?.title ?? "New Note")
+                    .font(.system(size: 13, weight: .medium))
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 56)
+                    .padding(.top, 16)
+                    .transition(.opacity)
             }
         }
+        .animation(.easeInOut(duration: 0.15), value: bridge.isWindowHovered)
         .onAppear {
             content = store.note(id: noteID)?.content ?? ""
         }

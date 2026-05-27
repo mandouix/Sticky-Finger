@@ -63,9 +63,7 @@ final class WindowManager {
         let origin: NSPoint
         if let src = sourceFrame {
             let x = src.midX - panelSize.width / 2
-            // src.maxY is the top of the note window in screen coords (y=0 at bottom).
-            // Subtract 120pt to get 120pt from the top, then subtract panel height for origin.y.
-            let y = src.maxY - 80 - panelSize.height
+            let y = src.midY - panelSize.height / 2
             origin = NSPoint(x: x, y: max(screenFrame.minY, y))
         } else {
             origin = NSPoint(
@@ -96,12 +94,61 @@ final class WindowManager {
     // MARK: - Open all existing notes on launch
 
     func openAllExistingNotes() {
-        let notes = NoteStore.shared.notes
-        if notes.isEmpty {
-            let note = NoteStore.shared.add()
-            open(note)
+        let store = NoteStore.shared
+        if store.notes.isEmpty {
+            let note = store.add()
+            store.update(id: note.id, content: Self.welcomeContent)
+            open(store.note(id: note.id) ?? note)
         } else {
-            notes.prefix(1).forEach { open($0) }
+            store.notes.prefix(1).forEach { open($0) }
         }
     }
+
+    private static let welcomeContent = """
+    # Welcome to New Sticky
+
+    Floating notes that stay on top while you work.
+
+    ## Using the App
+
+    Hover over a note to reveal the toolbar:
+    - **Pin** — keeps the note above all other windows
+    - **All Notes** — browse and search every note
+    - **+** — open a new note beside this one
+
+    ## Markdown Cheatsheet
+
+    **Bold** and *italic* and ~~strikethrough~~
+
+    ## Headings
+
+    # Heading 1
+    ## Heading 2
+    ### Heading 3
+
+    ## Lists
+
+    - Unordered item
+    - Another item
+
+    1. First ordered item
+    2. Second ordered item
+
+    ## Code
+
+    Inline `code` with backticks.
+
+    ```
+    // Code block
+    let greeting = "Hello, world!"
+    ```
+
+    ## Blockquote
+
+    > Great ideas deserve great notes.
+
+    ---
+
+    Delete this note and start writing!
+    """
 }

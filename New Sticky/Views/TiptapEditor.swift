@@ -6,6 +6,7 @@ struct TiptapEditor: NSViewRepresentable {
 
     @Binding var text: String
     @Binding var editorHeight: CGFloat
+    var bridge: EditorBridge?
 
     func makeNSView(context: Context) -> WKWebView {
         let config = WKWebViewConfiguration()
@@ -19,10 +20,16 @@ struct TiptapEditor: NSViewRepresentable {
             webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
         }
 
+        bridge?.webView = webView
+        context.coordinator.bridge = bridge
+
         return webView
     }
 
     func updateNSView(_ webView: WKWebView, context: Context) {
+        context.coordinator.bridge = bridge
+        if bridge?.webView == nil { bridge?.webView = webView }
+
         guard context.coordinator.isLoaded, !context.coordinator.isUpdatingFromJS else { return }
         guard context.coordinator.lastSyncedText != text else { return }
         context.coordinator.pushContent(text, to: webView, init: false)
@@ -39,6 +46,7 @@ struct TiptapEditor: NSViewRepresentable {
         var isLoaded = false
         var isUpdatingFromJS = false
         var lastSyncedText = ""
+        var bridge: EditorBridge?
 
         init(text: Binding<String>, editorHeight: Binding<CGFloat>) {
             self.text = text
@@ -47,7 +55,6 @@ struct TiptapEditor: NSViewRepresentable {
 
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             isLoaded = true
-            // Use the current binding value — onAppear will have set it by now in typical flows.
             let markdown = text.wrappedValue
             pushContent(markdown, to: webView, init: true)
         }
@@ -65,6 +72,31 @@ struct TiptapEditor: NSViewRepresentable {
         func userContentController(_ controller: WKUserContentController, didReceive message: WKScriptMessage) {
             guard message.name == "update",
                   let body = message.body as? [String: Any] else { return }
+
+            // Toolbar state update
+            if let toolbar = body["toolbar"] as? [String: Any] {
+                DispatchQueue.main.async {
+                    self.bridge?.state.visible     = toolbar["visible"] as? Bool ?? false
+                    self.bridge?.state.bold        = toolbar["bold"]    as? Bool ?? false
+                    self.bridge?.state.italic      = toolbar["italic"]  as? Bool ?? false
+                    self.bridge?.state.underline   = toolbar["underline"] as? Bool ?? false
+                    self.bridge?.state.strike      = toolbar["strike"]  as? Bool ?? false
+                    self.bridge?.state.heading     = toolbar["heading"] as? Int  ?? 0
+                    self.bridge?.state.bulletList  = toolbar["bulletList"]  as? Bool ?? false
+                    self.bridge?.state.orderedList = toolbar["orderedList"] as? Bool ?? false
+                    self.bridge?.state.taskList    = toolbar["taskList"]    as? Bool ?? false
+                    self.bridge?.state.code        = toolbar["code"]        as? Bool ?? false
+                    self.bridge?.state.codeBlock   = toolbar["codeBlock"]   as? Bool ?? false
+                    self.bridge?.state.blockquote  = toolbar["blockquote"]  as? Bool ?? false
+                    if let r = toolbar["rect"] as? [String: Double] {
+                        self.bridge?.state.selectionRect = CGRect(
+                            x: r["x"] ?? 0, y: r["y"] ?? 0,
+                            width: r["w"] ?? 0, height: r["h"] ?? 0
+                        )
+                    }
+                }
+                return
+            }
 
             isUpdatingFromJS = true
             defer { isUpdatingFromJS = false }
