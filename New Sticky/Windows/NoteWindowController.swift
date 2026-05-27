@@ -16,7 +16,7 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
         self.store = store
 
         let window = StickyNoteWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 280, height: 180),
+            contentRect: NSRect(x: 0, y: 0, width: 320, height: 180),
             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
             backing: .buffered,
             defer: false
@@ -28,7 +28,7 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
         window.isOpaque = false
         window.hasShadow = true
         window.level = .floating
-        window.minSize = NSSize(width: 240, height: 140)
+        window.minSize = NSSize(width: 320, height: 180)
         window.center()
 
         super.init(window: window)

@@ -1,12 +1,28 @@
 import SwiftUI
 
-// Row height used to calculate fixed panel scroll area (3 rows visible)
-private let rowHeight: CGFloat = 52
+// Shared layout constants — used by both AllNotesView and AllNotesWindowController.
+let allNotesPanelWidth: CGFloat = 280
+let allNotesPanelMaxHeight: CGFloat = 240
+let allNotesRowHeight: CGFloat = 52
+let allNotesSearchBarHeight: CGFloat = 36
+let allNotesPanelPadding: CGFloat = 8
+let allNotesPanelSpacing: CGFloat = 4
+
+/// Computes the panel height for a given number of visible note rows.
+func allNotesPanelHeight(noteCount: Int) -> CGFloat {
+    let maxListH = allNotesPanelMaxHeight - allNotesPanelPadding * 2
+                   - allNotesSearchBarHeight - allNotesPanelSpacing
+    let listH: CGFloat = noteCount > 0
+        ? allNotesPanelSpacing + min(CGFloat(noteCount) * allNotesRowHeight, maxListH)
+        : 0
+    return allNotesPanelPadding * 2 + allNotesSearchBarHeight + listH
+}
 
 struct AllNotesView: View {
     @ObservedObject var store: NoteStore
     let sourceNoteID: UUID
     var cornerRadius: CGFloat = 10
+    var onHeightChange: ((CGFloat) -> Void)? = nil
 
     @State private var searchText = ""
 
@@ -18,9 +34,14 @@ struct AllNotesView: View {
         }
     }
 
+    private var listHeight: CGFloat {
+        let maxListH = allNotesPanelMaxHeight - allNotesPanelPadding * 2
+                       - allNotesSearchBarHeight - allNotesPanelSpacing
+        return min(CGFloat(filtered.count) * allNotesRowHeight, maxListH)
+    }
+
     var body: some View {
-        VStack(spacing: 4) {
-            // Search field
+        VStack(spacing: allNotesPanelSpacing) {
             HStack(spacing: 6) {
                 Image(systemName: "magnifyingglass")
                     .font(.system(size: 12, weight: .medium))
@@ -30,22 +51,29 @@ struct AllNotesView: View {
                     .font(.system(size: 14))
             }
             .padding(.horizontal, 10)
-            .frame(height: 36)
+            .frame(height: allNotesSearchBarHeight)
             .glassEffect(.regular, in: Capsule())
 
-            // Notes list — capped at 3 rows, scrollable beyond that
-            ScrollView {
-                LazyVStack(spacing: 0) {
-                    ForEach(filtered) { note in
-                        NoteRow(note: note, sourceNoteID: sourceNoteID, store: store)
+            if !filtered.isEmpty {
+                ScrollView {
+                    LazyVStack(spacing: 0) {
+                        ForEach(filtered) { note in
+                            NoteRow(note: note, sourceNoteID: sourceNoteID, store: store)
+                        }
                     }
                 }
+                .frame(height: listHeight)
             }
-            .frame(height: rowHeight * 3)
         }
-        .padding(8)
-        .frame(width: 256)
+        .padding(allNotesPanelPadding)
+        .frame(width: allNotesPanelWidth)
         .glassEffect(.regular, in: RoundedRectangle(cornerRadius: cornerRadius))
+        .onAppear {
+            onHeightChange?(allNotesPanelHeight(noteCount: filtered.count))
+        }
+        .onChange(of: filtered.count) { _, count in
+            onHeightChange?(allNotesPanelHeight(noteCount: count))
+        }
     }
 }
 
@@ -86,7 +114,7 @@ private struct NoteRow: View {
             .buttonStyle(.plain)
         }
         .padding(.horizontal, 8)
-        .frame(height: rowHeight)
+        .frame(height: allNotesRowHeight)
         .background(isHovered ? Color.primary.opacity(0.07) : Color.clear)
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .contentShape(Rectangle())

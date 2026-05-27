@@ -16,7 +16,7 @@ final class AllNotesWindowController: NSWindowController, NSWindowDelegate {
         self.store = store
 
         let panel = KeyablePanel(
-            contentRect: NSRect(x: 0, y: 0, width: 272, height: 214),
+            contentRect: NSRect(x: 0, y: 0, width: allNotesPanelWidth, height: allNotesPanelMaxHeight),
             styleMask: [.nonactivatingPanel, .borderless, .resizable],
             backing: .buffered,
             defer: false
@@ -36,14 +36,19 @@ final class AllNotesWindowController: NSWindowController, NSWindowDelegate {
 
     private func updateContent() {
         let radius = WindowManager.shared.noteWindowCornerRadius()
-        let view = AllNotesView(store: store, sourceNoteID: sourceNoteID, cornerRadius: radius)
+        var view = AllNotesView(store: store, sourceNoteID: sourceNoteID, cornerRadius: radius)
+        view.onHeightChange = { [weak self] height in
+            DispatchQueue.main.async { self?.resizePanel(toHeight: height) }
+        }
         window?.contentView = NSHostingView(rootView: view)
     }
 
     override func showWindow(_ sender: Any?) {
         updateContent()
+        // Size the panel to fit the current note count before it appears.
+        let h = allNotesPanelHeight(noteCount: store.notes.count)
+        window?.setContentSize(NSSize(width: allNotesPanelWidth, height: h))
         super.showWindow(sender)
-        // Make the panel key so the search field can receive keyboard input.
         window?.makeKeyAndOrderFront(nil)
         startMonitoringClickOutside()
     }
@@ -51,6 +56,18 @@ final class AllNotesWindowController: NSWindowController, NSWindowDelegate {
     func windowWillClose(_ notification: Notification) {
         stopMonitoringClickOutside()
         WindowManager.shared.allNotesController = nil
+    }
+
+    // MARK: - Panel resize
+
+    private func resizePanel(toHeight height: CGFloat) {
+        guard let window else { return }
+        let newH = min(height, allNotesPanelMaxHeight)
+        guard abs(window.frame.height - newH) > 1 else { return }
+        var frame = window.frame
+        frame.origin.y += frame.height - newH   // keep top edge fixed
+        frame.size.height = newH
+        window.setFrame(frame, display: true, animate: false)
     }
 
     // MARK: - Click-outside-to-close

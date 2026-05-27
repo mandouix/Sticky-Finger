@@ -65,7 +65,7 @@ final class WindowManager {
             let x = src.midX - panelSize.width / 2
             // src.maxY is the top of the note window in screen coords (y=0 at bottom).
             // Subtract 120pt to get 120pt from the top, then subtract panel height for origin.y.
-            let y = src.maxY - 120 - panelSize.height
+            let y = src.maxY - 80 - panelSize.height
             origin = NSPoint(x: x, y: max(screenFrame.minY, y))
         } else {
             origin = NSPoint(
