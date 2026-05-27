@@ -3,6 +3,7 @@ import Foundation
 struct Note: Identifiable, Codable, Equatable {
     var id: UUID = UUID()
     var content: String = ""
+    var noteColor: NoteColor = .default
     var createdAt: Date = Date()
     var updatedAt: Date = Date()
 

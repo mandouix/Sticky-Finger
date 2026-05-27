@@ -97,58 +97,9 @@ final class WindowManager {
         let store = NoteStore.shared
         if store.notes.isEmpty {
             let note = store.add()
-            store.update(id: note.id, content: Self.welcomeContent)
             open(store.note(id: note.id) ?? note)
         } else {
             store.notes.prefix(1).forEach { open($0) }
         }
     }
-
-    private static let welcomeContent = """
-    # Welcome to New Sticky
-
-    Floating notes that stay on top while you work.
-
-    ## Using the App
-
-    Hover over a note to reveal the toolbar:
-    - **Pin** — keeps the note above all other windows
-    - **All Notes** — browse and search every note
-    - **+** — open a new note beside this one
-
-    ## Markdown Cheatsheet
-
-    **Bold** and *italic* and ~~strikethrough~~
-
-    ## Headings
-
-    # Heading 1
-    ## Heading 2
-    ### Heading 3
-
-    ## Lists
-
-    - Unordered item
-    - Another item
-
-    1. First ordered item
-    2. Second ordered item
-
-    ## Code
-
-    Inline `code` with backticks.
-
-    ```
-    // Code block
-    let greeting = "Hello, world!"
-    ```
-
-    ## Blockquote
-
-    > Great ideas deserve great notes.
-
-    ---
-
-    Delete this note and start writing!
-    """
 }

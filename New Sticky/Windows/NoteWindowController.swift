@@ -9,7 +9,7 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
     let bridge = EditorBridge()
 
     private let headerHeight: CGFloat = 56
-    private let footerHeight: CGFloat = 34
+    private let footerHeight: CGFloat = 48
     private let webLeft: CGFloat = 16
     private let barH: CGFloat = 40     // panel height (36pt bar + 4pt breathing room)
     private let barHalfW: CGFloat = 80 // clamp margin
@@ -17,6 +17,10 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
     private var formatPanel: NSPanel?
     private var stateCancellable: AnyCancellable?
     private var hoverTimer: Timer?
+
+    private var isResizingProgrammatically = false
+    private var isHeightManuallyReduced = false
+    private var currentEditorHeight: CGFloat = 56
 
     init(note: Note, store: NoteStore) {
         self.noteID = note.id
@@ -35,7 +39,7 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
         window.isOpaque = false
         window.hasShadow = true
         window.level = .floating
-        window.minSize = NSSize(width: 320, height: 1)
+        window.minSize = NSSize(width: 320, height: 180)
         window.center()
 
         super.init(window: window)
@@ -129,25 +133,42 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
     }
 
     func resizeToFit(editorHeight: CGFloat) {
+        currentEditorHeight = editorHeight
         guard let window else { return }
-        let screen = window.screen ?? NSScreen.main
-        let maxH = screen.map { $0.visibleFrame.height } ?? 900
 
         let desired = headerHeight + editorHeight + footerHeight
+        let maxH = (window.screen ?? NSScreen.main).map { $0.visibleFrame.height } ?? 900
         let newH = min(maxH, desired)
+
+        if isHeightManuallyReduced {
+            // Content shrank enough to fit in the manual window — snap back to content-hugged
+            if newH <= window.frame.height + 2 {
+                isHeightManuallyReduced = false
+            } else {
+                return
+            }
+        }
 
         guard abs(window.frame.height - newH) > 1 else { return }
 
+        isResizingProgrammatically = true
         var frame = window.frame
         frame.origin.y += frame.height - newH
         frame.size.height = newH
         window.setFrame(frame, display: true, animate: false)
+        isResizingProgrammatically = false
     }
 
     // MARK: - NSWindowDelegate
 
     func windowWillResize(_ sender: NSWindow, to frameSize: NSSize) -> NSSize {
-        NSSize(width: max(320, frameSize.width), height: frameSize.height)
+        NSSize(width: max(320, frameSize.width), height: max(180, frameSize.height))
+    }
+
+    func windowDidResize(_ notification: Notification) {
+        guard !isResizingProgrammatically, let window else { return }
+        let desired = headerHeight + currentEditorHeight + footerHeight
+        isHeightManuallyReduced = window.frame.height < desired - 2
     }
 
     func windowWillClose(_ notification: Notification) {

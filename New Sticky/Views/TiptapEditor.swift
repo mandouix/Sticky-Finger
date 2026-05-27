@@ -57,6 +57,11 @@ struct TiptapEditor: NSViewRepresentable {
             isLoaded = true
             let markdown = text.wrappedValue
             pushContent(markdown, to: webView, init: true)
+            if let accent = bridge?.pendingAccent {
+                webView.evaluateJavaScript(
+                    "document.documentElement.style.setProperty('--accent','\(accent)')"
+                ) { _, _ in }
+            }
         }
 
         func pushContent(_ markdown: String, to webView: WKWebView, `init` isInit: Bool) {
@@ -94,6 +99,14 @@ struct TiptapEditor: NSViewRepresentable {
                             width: r["w"] ?? 0, height: r["h"] ?? 0
                         )
                     }
+                }
+                return
+            }
+
+            if let scroll = body["scroll"] as? [String: Double] {
+                DispatchQueue.main.async {
+                    self.bridge?.scrollTop    = CGFloat(scroll["top"]    ?? 0)
+                    self.bridge?.scrollBottom = CGFloat(scroll["bottom"] ?? 0)
                 }
                 return
             }

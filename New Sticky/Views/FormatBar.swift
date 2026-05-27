@@ -33,7 +33,7 @@ struct FormatBar: View {
             }
         }
         .padding(2)
-        .background(Capsule().fill(Color.white.opacity(0.07)))
+        .background(Capsule().fill(Color.black.opacity(0.28)))
         .glassEffect(.regular, in: Capsule())
         .overlay(Capsule().strokeBorder(Color.primary.opacity(0.1), lineWidth: 0.5))
         .shadow(color: .black.opacity(0.15), radius: 8, x: 0, y: 4)

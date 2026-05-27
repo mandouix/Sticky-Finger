@@ -32,6 +32,12 @@ final class NoteStore: ObservableObject {
         scheduleSave()
     }
 
+    func update(id: UUID, color: NoteColor) {
+        guard let index = notes.firstIndex(where: { $0.id == id }) else { return }
+        notes[index].noteColor = color
+        scheduleSave()
+    }
+
     func delete(id: UUID) {
         notes.removeAll { $0.id == id }
         scheduleSave()

@@ -20,10 +20,19 @@ final class EditorBridge: ObservableObject {
 
     @Published var state = FormatState()
     @Published var isWindowHovered = false
+    @Published var scrollTop: CGFloat = 0
+    @Published var scrollBottom: CGFloat = 0
     weak var webView: WKWebView?
+
+    private(set) var pendingAccent: String = "CanvasText"
 
     private func exec(_ js: String) {
         webView?.evaluateJavaScript(js) { _, _ in }
+    }
+
+    func setAccentColor(_ css: String) {
+        pendingAccent = css
+        exec("document.documentElement.style.setProperty('--accent','\(css)')")
     }
 
     func toggleBold()        { exec("window.editorAPI.toggleBold()") }
