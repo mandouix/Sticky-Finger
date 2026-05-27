@@ -87,6 +87,18 @@ struct NoteView: View {
                 .ignoresSafeArea(.all, edges: .top)
             }
 
+            // Dismiss color picker on outside click
+            if isColorPickerOpen {
+                Color.clear
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        withAnimation(.spring(response: 0.28, dampingFraction: 0.72)) {
+                            isColorPickerOpen = false
+                        }
+                    }
+                    .ignoresSafeArea()
+            }
+
             // Character count + color picker pinned to bottom
             VStack(spacing: 0) {
                 Spacer()
