@@ -22,6 +22,7 @@ final class EditorBridge: ObservableObject {
     @Published var isWindowHovered = false
     @Published var scrollTop: CGFloat = 0
     @Published var scrollBottom: CGFloat = 0
+    @Published var visibleCharCount: Int = 0
     weak var webView: WKWebView?
 
     private(set) var pendingAccent: String = "CanvasText"

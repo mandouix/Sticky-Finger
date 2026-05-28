@@ -40,7 +40,15 @@ final class AllNotesWindowController: NSWindowController, NSWindowDelegate {
         view.onHeightChange = { [weak self] height in
             DispatchQueue.main.async { self?.resizePanel(toHeight: height) }
         }
-        window?.contentView = NSHostingView(rootView: view)
+        let hostingView = NSHostingView(rootView: view)
+        window?.contentView = hostingView
+
+        if let frameView = hostingView.superview {
+            frameView.wantsLayer = true
+            frameView.layer?.cornerRadius = 24
+            frameView.layer?.cornerCurve = .continuous
+            frameView.layer?.masksToBounds = true
+        }
     }
 
     override func showWindow(_ sender: Any?) {

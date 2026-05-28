@@ -98,7 +98,7 @@ enum MarkdownTheme {
 
     static var bodyParagraphStyle: NSParagraphStyle {
         let style = NSMutableParagraphStyle()
-        style.lineSpacing = 3
+        style.lineSpacing = 4
         return style
     }
 
@@ -106,7 +106,7 @@ enum MarkdownTheme {
         let style = NSMutableParagraphStyle()
         style.headIndent = 12
         style.firstLineHeadIndent = 12
-        style.lineSpacing = 3
+        style.lineSpacing = 4
         return style
     }
 
@@ -123,7 +123,7 @@ enum MarkdownTheme {
         let style = NSMutableParagraphStyle()
         style.headIndent = 16
         style.firstLineHeadIndent = 0
-        style.lineSpacing = 3
+        style.lineSpacing = 4
         return style
     }
 }

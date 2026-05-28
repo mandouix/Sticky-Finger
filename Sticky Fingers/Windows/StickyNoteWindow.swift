@@ -8,8 +8,10 @@ final class StickyNoteWindow: NSWindow {
 
     override func constrainFrameRect(_ frameRect: NSRect, to screen: NSScreen?) -> NSRect {
         var rect = super.constrainFrameRect(frameRect, to: screen)
+        let top = rect.maxY
         rect.size.width  = max(320, rect.size.width)
         rect.size.height = max(180, rect.size.height)
+        rect.origin.y    = top - rect.size.height  // keep top edge fixed when height grows
         return rect
     }
 

@@ -124,6 +124,9 @@ struct TiptapEditor: NSViewRepresentable {
                     editorHeight.wrappedValue = h
                 }
             }
+            if let tl = body["textLength"] as? Int {
+                bridge?.visibleCharCount = tl
+            }
         }
     }
 }

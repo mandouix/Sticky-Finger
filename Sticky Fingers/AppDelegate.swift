@@ -20,7 +20,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func setupStatusItem() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         if let button = statusItem?.button {
-            button.image = NSImage(systemSymbolName: "note.text", accessibilityDescription: "New Sticky")
+            button.image = NSImage(systemSymbolName: "text.document.fill", accessibilityDescription: "Sticky Fingers")
             button.image?.isTemplate = true
         }
 
@@ -28,7 +28,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(withTitle: "New Note", action: #selector(newNote), keyEquivalent: "n")
         menu.addItem(withTitle: "All Notes", action: #selector(showAllNotes), keyEquivalent: "a")
         menu.addItem(.separator())
-        menu.addItem(withTitle: "Quit New Sticky", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+        menu.addItem(withTitle: "Quit Sticky Fingers", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
 
         for item in menu.items {
             item.target = self

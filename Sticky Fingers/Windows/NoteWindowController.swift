@@ -48,6 +48,15 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
         let view = NoteView(noteID: note.id, store: store, windowController: self, bridge: bridge)
         window.contentView = NSHostingView(rootView: view)
 
+        // Clip the NSThemeFrame to our glass corner radius so the system border
+        // and the glass edge share the same geometry — otherwise two borders appear.
+        if let frameView = window.contentView?.superview {
+            frameView.wantsLayer = true
+            frameView.layer?.cornerRadius = 24
+            frameView.layer?.cornerCurve = .continuous
+            frameView.layer?.masksToBounds = true
+        }
+
         setupFormatPanel(in: window)
     }
 
@@ -67,6 +76,13 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
         panel.hasShadow = true
         panel.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
         panel.contentView = NSHostingView(rootView: FormatBar(bridge: bridge))
+
+        if let frameView = panel.contentView?.superview {
+            frameView.wantsLayer = true
+            frameView.layer?.cornerRadius = barH / 2   // matches Capsule shape
+            frameView.layer?.cornerCurve = .continuous
+            frameView.layer?.masksToBounds = true
+        }
 
         window.addChildWindow(panel, ordered: .above)
         formatPanel = panel
@@ -138,7 +154,7 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
 
         let desired = headerHeight + editorHeight + footerHeight
         let maxH = (window.screen ?? NSScreen.main).map { $0.visibleFrame.height } ?? 900
-        let newH = min(maxH, desired)
+        let newH = max(window.minSize.height, min(maxH, desired))
 
         if isHeightManuallyReduced {
             // Content shrank enough to fit in the manual window — snap back to content-hugged

@@ -47,7 +47,10 @@ struct NoteView: View {
                                 store: store,
                                 windowController: windowController
                             )
-                            .transition(.opacity.combined(with: .scale(scale: 0.92, anchor: .trailing)))
+                            .transition(.asymmetric(
+                                insertion: .opacity.combined(with: .scale(scale: 0.9, anchor: .trailing)),
+                                removal:   .opacity.combined(with: .scale(scale: 0.97, anchor: .trailing))
+                            ))
                         }
                     }
                     .frame(height: 32)
@@ -103,13 +106,17 @@ struct NoteView: View {
             VStack(spacing: 0) {
                 Spacer()
                 HStack(alignment: .center) {
-                    Text("\(content.count) characters")
+                    Text("\(bridge.visibleCharCount) characters")
                         .font(.system(size: 13))
+                        .monospacedDigit()
                         .foregroundStyle(.tertiary)
                     Spacer()
                     if bridge.isWindowHovered {
                         NoteColorPicker(selectedColor: colorBinding, isExpanded: $isColorPickerOpen)
-                            .transition(.opacity)
+                            .transition(.asymmetric(
+                                insertion: .opacity.combined(with: .scale(scale: 0.85, anchor: .bottomTrailing)),
+                                removal:   .opacity.combined(with: .scale(scale: 0.97, anchor: .bottomTrailing))
+                            ))
                     }
                 }
                 .padding(.horizontal, 16)
@@ -126,10 +133,10 @@ struct NoteView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal, 56)
                     .padding(.top, 16)
-                    .transition(.opacity)
+                    .transition(.opacity.combined(with: .scale(scale: 0.96, anchor: .top)))
             }
         }
-        .animation(.easeInOut(duration: 0.15), value: bridge.isWindowHovered)
+        .animation(.easeOut(duration: 0.2), value: bridge.isWindowHovered)
         .animation(.easeInOut(duration: 0.15), value: isColorPickerOpen)
         .onAppear {
             content = store.note(id: noteID)?.content ?? ""

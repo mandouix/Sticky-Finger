@@ -10,8 +10,20 @@ struct NoteToolbar: View {
 
     var body: some View {
         HStack(spacing: 8) {
-            ToolbarCircleButton(systemImage: isPinned ? "pin.fill" : "pin", help: isPinned ? "Unpin" : "Pin above all windows") {
+            ToolbarCircleButton(help: isPinned ? "Unpin" : "Pin above all windows") {
                 isPinned = windowController?.window?.togglePin() ?? false
+            } label: {
+                ZStack {
+                    Image(systemName: "pin")
+                        .opacity(isPinned ? 0 : 1)
+                        .scaleEffect(isPinned ? 0.25 : 1)
+                        .blur(radius: isPinned ? 4 : 0)
+                    Image(systemName: "pin.fill")
+                        .opacity(isPinned ? 1 : 0)
+                        .scaleEffect(isPinned ? 1 : 0.25)
+                        .blur(radius: isPinned ? 0 : 4)
+                }
+                .animation(.easeInOut(duration: 0.2), value: isPinned)
             }
 
             HStack(spacing: 0) {
@@ -33,18 +45,19 @@ struct NoteToolbar: View {
 
                 Button {
                     let newNote = store.add()
+                    let defaultSize = NSSize(width: 320, height: 180)
                     if let currentFrame = windowController?.window?.frame {
                         let gap: CGFloat = 12
                         let screenFrame = windowController?.window?.screen?.visibleFrame
                             ?? NSScreen.main?.visibleFrame
                             ?? NSRect(x: 0, y: 0, width: 1440, height: 900)
                         var x = currentFrame.maxX + gap
-                        if x + currentFrame.width > screenFrame.maxX {
-                            x = currentFrame.minX - gap - currentFrame.width
+                        if x + defaultSize.width > screenFrame.maxX {
+                            x = currentFrame.minX - gap - defaultSize.width
                         }
                         x = max(screenFrame.minX, x)
                         let newFrame = NSRect(x: x, y: currentFrame.origin.y,
-                                             width: currentFrame.width, height: currentFrame.height)
+                                             width: defaultSize.width, height: defaultSize.height)
                         WindowManager.shared.open(newNote, at: newFrame)
                     } else {
                         WindowManager.shared.open(newNote)
@@ -67,20 +80,28 @@ struct NoteToolbar: View {
     }
 }
 
-private struct ToolbarCircleButton: View {
-    let systemImage: String
+private struct ToolbarCircleButton<Label: View>: View {
     let help: String
     let action: () -> Void
+    @ViewBuilder let label: () -> Label
+
+    @GestureState private var isPressed = false
 
     var body: some View {
         Button(action: action) {
-            Image(systemName: systemImage)
+            label()
                 .font(.system(size: 14, weight: .semibold))
                 .foregroundStyle(.primary)
                 .frame(width: 36, height: 36)
         }
         .buttonStyle(.plain)
         .glassEffect(.regular, in: Circle())
+        .scaleEffect(isPressed ? 0.96 : 1.0)
+        .animation(.easeInOut(duration: 0.1), value: isPressed)
+        .simultaneousGesture(
+            DragGesture(minimumDistance: 0)
+                .updating($isPressed) { _, state, _ in state = true }
+        )
         .pointerCursor()
         .help(help)
     }

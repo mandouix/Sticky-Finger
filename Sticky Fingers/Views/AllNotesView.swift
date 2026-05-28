@@ -89,7 +89,7 @@ private struct NoteRow: View {
 
     var body: some View {
         HStack(spacing: 8) {
-            Image(systemName: "note.text")
+            Image(systemName: "text.document")
                 .font(.system(size: 14))
                 .foregroundStyle(.secondary)
                 .frame(width: 20)
@@ -101,6 +101,7 @@ private struct NoteRow: View {
                     .lineLimit(1)
                 Text("\(note.characterCount) characters")
                     .font(.system(size: 12))
+                    .monospacedDigit()
                     .foregroundStyle(.secondary)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -118,7 +119,7 @@ private struct NoteRow: View {
                 Image(systemName: "trash")
                     .font(.system(size: 14))
                     .foregroundStyle(isTrashHovered ? Color.red : Color.secondary)
-                    .frame(width: 24, height: 24)
+                    .frame(width: 36, height: 36)
             }
             .buttonStyle(.plain)
             .onHover { hover in
@@ -130,7 +131,7 @@ private struct NoteRow: View {
         .background(isHovered ? Color.primary.opacity(0.07) : Color.clear)
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .contentShape(Rectangle())
-        .onHover { isHovered = $0 }
+        .onHover { h in withAnimation(.easeOut(duration: 0.15)) { isHovered = h } }
         .onTapGesture {
             WindowManager.shared.selectNote(note.id, replacing: sourceNoteID)
         }

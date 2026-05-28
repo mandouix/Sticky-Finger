@@ -47,7 +47,7 @@
 		78BB5A5F6855288603CD954D /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
 		7D7A69A8F53FCF8A3D8E56BA /* MarkdownTextStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTextStorage.swift; sourceTree = "<group>"; };
 		8AB390770D1159AC231DCA6F /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
-		8D1DA746C1A8FC4D55CE4B8E /* New Sticky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New Sticky.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1DA746C1A8FC4D55CE4B8E /* Sticky Fingers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sticky Fingers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A142AA7271A174DF72E2CF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A891E5320DE37045DF116DF6 /* NoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStore.swift; sourceTree = "<group>"; };
 		AF10E76D9B0B87581620FE2E /* editor.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = editor.html; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		723CE01BC3D1ED20F99D6B80 /* New Sticky */ = {
+		723CE01BC3D1ED20F99D6B80 /* Sticky Fingers */ = {
 			isa = PBXGroup;
 			children = (
 				45552EA47F57F6AD8C914AE3 /* Extensions */,
@@ -102,13 +102,13 @@
 				A142AA7271A174DF72E2CF60 /* Info.plist */,
 				32D656F27C981395910DFAB0 /* NewStickyApp.swift */,
 			);
-			path = "New Sticky";
+			path = "Sticky Fingers";
 			sourceTree = "<group>";
 		};
 		7FA76532AD9E59106F077DCE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1DA746C1A8FC4D55CE4B8E /* New Sticky.app */,
+				8D1DA746C1A8FC4D55CE4B8E /* Sticky Fingers.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 		D96795E6ADA1B28EE496D4BB = {
 			isa = PBXGroup;
 			children = (
-				723CE01BC3D1ED20F99D6B80 /* New Sticky */,
+				723CE01BC3D1ED20F99D6B80 /* Sticky Fingers */,
 				7FA76532AD9E59106F077DCE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -159,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D58B587A7EE3D7E8D0B8DE06 /* New Sticky */ = {
+		D58B587A7EE3D7E8D0B8DE06 /* Sticky Fingers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC169A4AC50A903795BF4E96 /* Build configuration list for PBXNativeTarget "New Sticky" */;
+			buildConfigurationList = FC169A4AC50A903795BF4E96 /* Build configuration list for PBXNativeTarget "Sticky Fingers" */;
 			buildPhases = (
 				3D88A0F3D2D080F13F8B05B1 /* Sources */,
 				89844B7C87137D4DCF5F5D8B /* Resources */,
@@ -170,11 +170,11 @@
 			);
 			dependencies = (
 			);
-			name = "New Sticky";
+			name = "Sticky Fingers";
 			packageProductDependencies = (
 			);
-			productName = "New Sticky";
-			productReference = 8D1DA746C1A8FC4D55CE4B8E /* New Sticky.app */;
+			productName = "Sticky Fingers";
+			productReference = 8D1DA746C1A8FC4D55CE4B8E /* Sticky Fingers.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +188,7 @@
 				TargetAttributes = {
 				};
 			};
-			buildConfigurationList = 7C272B500768F7E519FB5F3D /* Build configuration list for PBXProject "New Sticky" */;
+			buildConfigurationList = 7C272B500768F7E519FB5F3D /* Build configuration list for PBXProject "Sticky Fingers" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -202,7 +202,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D58B587A7EE3D7E8D0B8DE06 /* New Sticky */,
+				D58B587A7EE3D7E8D0B8DE06 /* Sticky Fingers */,
 			);
 		};
 /* End PBXProject section */
@@ -261,14 +261,14 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "New Sticky/Info.plist";
+				INFOPLIST_FILE = "Sticky Fingers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mandarchaudhari.newsticky;
-				PRODUCT_NAME = "New Sticky";
+				PRODUCT_NAME = "Sticky Fingers";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.9;
 			};
@@ -340,14 +340,14 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "New Sticky/Info.plist";
+				INFOPLIST_FILE = "Sticky Fingers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mandarchaudhari.newsticky;
-				PRODUCT_NAME = "New Sticky";
+				PRODUCT_NAME = "Sticky Fingers";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.9;
 			};
@@ -419,7 +419,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7C272B500768F7E519FB5F3D /* Build configuration list for PBXProject "New Sticky" */ = {
+		7C272B500768F7E519FB5F3D /* Build configuration list for PBXProject "Sticky Fingers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC4EFC8C1EC46D8A8793FE6A /* Debug */,
@@ -428,7 +428,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		FC169A4AC50A903795BF4E96 /* Build configuration list for PBXNativeTarget "New Sticky" */ = {
+		FC169A4AC50A903795BF4E96 /* Build configuration list for PBXNativeTarget "Sticky Fingers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				448CF3C519C7EA74DBB60772 /* Debug */,
