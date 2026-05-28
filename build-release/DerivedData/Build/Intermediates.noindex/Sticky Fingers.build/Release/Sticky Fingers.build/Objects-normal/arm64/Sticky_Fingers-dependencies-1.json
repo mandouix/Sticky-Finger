@@ -206,469 +206,469 @@
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Accessibility.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Accessibility-3T7YXNK7X64BZM3I5XTQDNCO0.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Accessibility-6PQT2Y6EF5UNWT9ZT2DOCZ5UZ.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Accessibility"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/AppKit.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/AppKit-88NCGSITJMKN8OQFJW3W8V2WW.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/AppKit-X52V5KE85BWSRG3GHCQ89DC9.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "AppKit"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/ApplicationServices.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/ApplicationServices-1LJI1776GXML0BH9LJMAARG95.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/ApplicationServices-BPUH8ILQA4GDEV8BZAQ9H7K2N.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ApplicationServices"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CFNetwork.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CFNetwork-6C0ETRMC37UM20FXC8V4OU40U.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CFNetwork-35NX5OPNI9LQ5OPP8EWZNKXVB.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CFNetwork"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/cups.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CUPS-2I01OH5ROY4UHPEO7JPLUGOP6.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CUPS-11F8XFHW2R8KTRYBXL4GGUQV1.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CUPS"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/ColorSync.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/ColorSync-711N4LVMJ7RVEUVCTO2XPRVUB.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/ColorSync-EROWYRYLN43UKOAFKO80W30LE.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ColorSync"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreData.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreData-CMKG7PB5JQ8ZVJT089LQPXK4E.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreData-5TYGEYJXA19F5GFEHKH5T91SI.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreData"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreFoundation.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreFoundation-C7BFEFR5RXXSB62GQSSHI9RX4.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreFoundation-AYJP55E9QO7R4ZZRWT59KULBO.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreFoundation"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreGraphics.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreGraphics-1UZ8ELDQ2SVSR09V3RB6Q1R1R.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreGraphics-1UY327DF9TTIHXNQEQYUNLJX5.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreGraphics"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreImage.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreImage-81QOGP13MXQRLXP0LC0CEM2H7.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreImage-5CB5UWW7QSO2URMVYMKMJZEI8.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreImage"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreServices.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreServices-7AHOTHUKRXRCIO9EQFGXAGVFJ.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreServices-8V4L67X1SWZYN5LXHNUT8XR5J.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreServices"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreText.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreText-2U2FN4XYOAKDTAA7AV9CZ4W4R.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreText-6LVH79XG1GO76ICIPGG3JOOBD.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreText"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreTransferable.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreTransferable-6SLTJLXXEHIG1L6SAGU6GZQ51.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreTransferable-39JZNZJ8GUJQR82ASSY9D4SOL.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreTransferable"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/CoreVideo.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreVideo-7VEI6Y7XAM30D40P3TCX4YT88.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/CoreVideo-3RHOCT6887VGBJ2PDAUC3MVF3.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "CoreVideo"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/Darwin.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Darwin-1IHBN5RKA629GLCB3SMDLBENL.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Darwin-A4K22CYID23G01QVS04K2LVYG.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Darwin"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/DataDetection.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/DataDetection-21E50NRD7SX74JTYNQYUJNQ6T.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/DataDetection-885G31KR668SUQHBFNHWAMMML.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "DataDetection"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/DeveloperToolsSupport.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/DeveloperToolsSupport-2NUB44RQQABFG5N84HBGBT94D.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/DeveloperToolsSupport-B0YM9VS6CYHRRMKLFGHH8795E.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "DeveloperToolsSupport"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/DiskArbitration.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/DiskArbitration-83HHY2E7A97QCL7AFGO4ORQO6.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/DiskArbitration-B4WKRFOZXMCJCB9B7LEFBQKEB.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "DiskArbitration"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/dispatch.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Dispatch-21ZUYC96SSM6HGYH4IGVUTFOE.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Dispatch-969OVEAHROH7QKNQJ2ERD97U2.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Dispatch"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Foundation.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Foundation-2KLLBTT63D4MF8FM3EZI13C2O.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Foundation-E5E36953RN69GOUNHCWMY7EDX.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Foundation"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/IOKit.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/IOKit-2WJ4JXGBN61QNBLTT24VPLNGG.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/IOKit-8EXCG90XJCE1XVIG5SYRMP9LN.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "IOKit"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/IOSurface.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/IOSurface-DKOFDVXL6TE04LCHZWSO3EEO8.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/IOSurface-EPE7YTE55P7IXZF3INM450BC9.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "IOSurface"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/ImageIO.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/ImageIO-76QXTRUUXL0L076CA4XEFLOHA.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/ImageIO-DITZAVHVWR8A5HJQ6K6N7PO03.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ImageIO"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Cryptexes\/OS\/System\/Library\/Frameworks\/JavaScriptCore.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/JavaScriptCore-7DNRG7MFWQ4ZGDS3HBM4Z4PM3.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/JavaScriptCore-82D0FQIH6WF0PU2YTKKCD3XTE.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "JavaScriptCore"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinBasic.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/MachO-5KIE6RVVI24F7YEBGUDSLUJE4.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/MachO-C3Z4Y4SN5K50JMHDGSHAPPRQP.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "MachO"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Metal.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Metal-7BP2ON7V9TC0XGANFCT1AM6HC.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Metal-6H1JNDKJE48S15PO6BQW9ZEVF.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Metal"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Network.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Network-D8T05LGVGM3KFFPD7J7D8BS4L.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Network-7AYI1BMYY9TQSB1U43NKVIGYS.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Network"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/OSLog.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/OSLog-33PUBP1OOBEALIFK3C328NKL7.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/OSLog-3PNWOH0VE0CQCJM5HOREQHO6Y.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "OSLog"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/ObjectiveC.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/ObjectiveC-3O3A0PMFDLAES0LIHYQR6241Z.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/ObjectiveC-CTYX2BHIU0UU9ZQ6T2Y6UI6ZD.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ObjectiveC"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/OpenGL.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/OpenGL-5E200X3H7FES4WW43182WFTJB.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/OpenGL-CIHQUZVKWV5M795FC9IFUOAIP.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "OpenGL"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/QuartzCore.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/QuartzCore-529U3SOUI618DW4S7M902PQ9D.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/QuartzCore-PU6RDP8RDBAO6UCN90B68W8J.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "QuartzCore"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Security.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Security-E4KR7Z0TBTQ0VBA08F4CAS6R6.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Security-A50RX1T48RDTVT2EKU2O9QJL4.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Security"
   },
   {
     "clangModuleMapPath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/Release\/Sparkle.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/Build\/Intermediates.noindex\/SwiftExplicitPrecompiledModules\/Sparkle-2OQF8DLFHGGWS3VIZDR218L3Q.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/Build\/Intermediates.noindex\/SwiftExplicitPrecompiledModules\/Sparkle-5VXX33S9FYBAS4HR48I1WQAH5.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Sparkle"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/Spatial\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Spatial-A11U4O55IZNI1X3ZWSK4EIR2J.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Spatial-B2ECRRVE5KDC70NO9R8NZOBQ3.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Spatial"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/lib\/swift\/shims\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/SwiftShims-U168JL549E440LH869TXN3CW.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/SwiftShims-EJD321O8MF4D1821ATJQB6Q5I.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "SwiftShims"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/SwiftUI.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/SwiftUI-C1TTKX9HVRQ7LRPJ71KAYWMFC.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/SwiftUI-41AFRMMP8QOTKO47QX9WHRNUP.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "SwiftUI"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/SwiftUICore.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/SwiftUICore-5YAOP6IWNNUAN10S4HKJRU4FO.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/SwiftUICore-7SCFUG7EHH0MGJGPV84XHPI8Q.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "SwiftUICore"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/Symbols.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Symbols-BYX6Q1VXKQH5Z2KBZ1QA8787D.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/Symbols-EONQMBQ9TTRKEZ24RUSI56KTX.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "Symbols"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Library\/Frameworks\/UniformTypeIdentifiers.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/UniformTypeIdentifiers-XOLQVVU35PEGI2AG95SREG67.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/UniformTypeIdentifiers-DSR252I1V3X9CPSRO745WFV1D.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "UniformTypeIdentifiers"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/System\/Cryptexes\/OS\/System\/Library\/Frameworks\/WebKit.framework\/Modules\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/WebKit-6GHKIW2WRSU2WSYX8RC53UZ0U.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/WebKit-46YQJMJCZWDR4M7AUJN5U7N6F.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "WebKit"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/xpc.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/XPC-A2FUATB38SSA9W9K43UWX3PYA.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/XPC-D3QXTMH3PDNXXEFODRU3BRO69.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "XPC"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation1.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_AvailabilityInternal-2ODHG2ELELP8FP47HA8HUVX6L.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_AvailabilityInternal-34145NRDNXF1A70AIHGN97F0V.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_AvailabilityInternal"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_float-7ZB027MD1U1VGZJN864BGRQUK.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_float-9O0S17XBBPX9QC27ZJQ0CK48L.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_float"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_intrinsics-9R0NAPJ8VQZ9CJEG7WCTSGE4J.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_intrinsics-1GGTQ1ESXUP6Y5KUB2FGKHWTZ.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_intrinsics"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_inttypes-85CXF9P0D1OFZB5WZCX61TQ7A.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_inttypes-9UM09XCH6DVZAQXJNR0X4PJYB.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_inttypes"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_limits-9AHGHW3BPRVUGLKW25RSCY6AH.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_limits-CPDFMI6FQQ69S4JI7ZM7G3WUK.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_limits"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_stdarg-3L9DA0Z2BQ2ANF61VN0EOFGTX.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_stdarg-DMUI4S1Q22HESAGGRIJ27MJ9J.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdarg"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_stdatomic-3JLACQ0552A1LDKCE1TAG3TRU.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_stdatomic-955NWS44MI9RQCE674XUF8OPL.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdatomic"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_stdbool-D5B6Y6G6JIJ71EFH0N7RM0OET.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_stdbool-48B30HQMX0K6YHL21QCU12FUW.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdbool"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_stddef-99BD5DBOAB3CUE8KNHD8KSI58.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_stddef-7TI4VL0SBSY0ARURJYHEI16NB.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stddef"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_stdint-1SJONKHNC4DI9KFJV3S8D2WQU.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_stdint-DBD2W34L01ELB3O4PZP7T4OMH.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_stdint"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_tgmath-1KW3549004UQYPARFVQNBCXNC.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_Builtin_tgmath-A3S1IP3YYGEMCIZG9UKCO0315.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_Builtin_tgmath"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation1.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_DarwinFoundation1-C5J419X68DXATQAU9MF4IBS5C.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_DarwinFoundation1-CWB0ZY3UHS1VWO518710HN550.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation1"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation2.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_DarwinFoundation2-5X3T1A6PBN4T8STZOTYKI67MM.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_DarwinFoundation2-ANXYPF8SQANJ8B3HOV0L0UOF8.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation2"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation3.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_DarwinFoundation3-6C2X1J7WKBG251M6F0XTVCB2M.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_DarwinFoundation3-7Y9EWQGC2L941EUW6KP5ME52X.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_DarwinFoundation3"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/lib\/swift\/shims\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_SwiftConcurrencyShims-AXFPUP8YP8C3WGTKDE7UONSLP.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/_SwiftConcurrencyShims-6PM05LH267D0PUHK7JU2WH47O.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "_SwiftConcurrencyShims"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/dnssd.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/dnssd-7UZTNYCV293QQPTLEP5SP12BY.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/dnssd-CVI07K0WIAPVYOS1FCIPI7VZH.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "dnssd"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/launch.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/launch-7K2SL1HKAWM3GP8RMX46C5F15.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/launch-DASLC0V236DCH7LK2U1BIUFOH.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "launch"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/libDER\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/libDER-D3WR5ADHW21US2DT25O5C07A1.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/libDER-2MWBH9TGIHA8DMM9SUOVX2C29.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "libDER"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/libkern.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/libkern-3X7L06514HJJ69TN5XUQ26DGF.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/libkern-1W0Y1SSYRUXDKEIM2ZKXBVBG3.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "libkern"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/os-E4UON8N2P269QPKLWWWN96CBQ.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/os-BIRSOGVM6HDTDRXXPFH524THA.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "os"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/os_object-2FHFFE6R74P6JUGTAID3IPIZT.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/os_object-8H2MRLXD5GT1NC6XUMBVDGUN1.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "os_object"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/os.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/os_workgroup-13ZXGGTQG4TO7GCH65R55OVRN.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/os_workgroup-7ATO6A2G77X187I80O1510ILT.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "os_workgroup"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/ptrauth-9P3JGZXP3ZVI3HUKIIMMD7MIX.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/ptrauth-BB2VE3QPZI1YRH5P6QWXKPNYD.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ptrauth"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Toolchains\/XcodeDefault.xctoolchain\/usr\/lib\/clang\/21\/include\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/ptrcheck-9ZTYSPU6EWNFUZNAS3YOBWZX4.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/ptrcheck-CZ3AF65W3T8Y29CC8OWU4JD2C.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "ptrcheck"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/simd\/module.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/simd-8C7Z6ZCBPWVRTDCRENTOGSIJF.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/simd-23LEJDM212AYJN6BVEV5VOEH.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "simd"
   },
   {
     "clangModuleMapPath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX.sdk\/usr\/include\/DarwinFoundation2.modulemap",
-    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/sys_types-BVNJXCXIZ9I9YJQJHSCZBR2PC.pcm",
+    "clangModulePath" : "\/Users\/mandarchaudhari\/Documents\/Projects\/Sticky Fingers\/build-release\/DerivedData\/ModuleCache.noindex\/sys_types-D6RAYVH8VJCQ4JXG5NKG4DV3Y.pcm",
     "isBridgingHeaderDependency" : false,
     "isFramework" : false,
     "moduleName" : "sys_types"
