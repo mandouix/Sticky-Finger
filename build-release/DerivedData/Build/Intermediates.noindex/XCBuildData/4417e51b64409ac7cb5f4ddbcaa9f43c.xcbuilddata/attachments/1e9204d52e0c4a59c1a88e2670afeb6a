@@ -1,0 +1,116 @@
+{
+  "" : {
+    "const-values" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky Fingers-primary.swiftconstvalues",
+    "dependencies" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky Fingers-primary.d",
+    "diagnostics" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky Fingers-primary.dia",
+    "emit-module-dependencies" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky Fingers-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky Fingers-primary-emit-module.dia",
+    "pch" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky Fingers-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky Fingers-primary.swiftdeps"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/AppDelegate.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/AppDelegate.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Extensions/NSWindow+Sticky.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NSWindow+Sticky.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NSWindow+Sticky.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NSWindow+Sticky.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Markdown/MarkdownTextStorage.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/MarkdownTextStorage.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/MarkdownTextStorage.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/MarkdownTextStorage.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Markdown/MarkdownTheme.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/MarkdownTheme.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/MarkdownTheme.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/MarkdownTheme.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Models/Note.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Note.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Note.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Note.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Models/NoteColor.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteColor.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteColor.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteColor.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Models/NoteStore.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteStore.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteStore.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteStore.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/NewStickyApp.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NewStickyApp.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NewStickyApp.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NewStickyApp.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Views/AllNotesView.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/AllNotesView.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/AllNotesView.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/AllNotesView.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Views/AllNotesWindowController.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/AllNotesWindowController.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/AllNotesWindowController.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/AllNotesWindowController.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Views/EditorBridge.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/EditorBridge.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/EditorBridge.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/EditorBridge.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Views/FormatBar.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/FormatBar.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/FormatBar.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/FormatBar.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Views/NoteBodyEditor.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteBodyEditor.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteBodyEditor.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteBodyEditor.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Views/NoteColorPicker.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteColorPicker.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteColorPicker.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteColorPicker.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Views/NoteToolbar.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteToolbar.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteToolbar.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteToolbar.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Views/NoteView.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteView.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteView.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteView.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Views/TiptapEditor.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/TiptapEditor.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/TiptapEditor.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/TiptapEditor.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Windows/NoteWindowController.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteWindowController.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteWindowController.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/NoteWindowController.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Windows/StickyNoteWindow.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/StickyNoteWindow.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/StickyNoteWindow.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/StickyNoteWindow.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Windows/WindowManager.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/WindowManager.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/WindowManager.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/WindowManager.o"
+  },
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  }
+}

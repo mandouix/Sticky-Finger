@@ -1,0 +1,21 @@
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Views/AllNotesView.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Views/AllNotesWindowController.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/AppDelegate.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Markdown/MarkdownTextStorage.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Markdown/MarkdownTheme.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Extensions/NSWindow+Sticky.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/NewStickyApp.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Models/Note.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Models/NoteColor.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Views/EditorBridge.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Views/FormatBar.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Views/NoteBodyEditor.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Views/NoteColorPicker.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Models/NoteStore.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Views/NoteToolbar.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Views/NoteView.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Windows/NoteWindowController.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Windows/StickyNoteWindow.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Views/TiptapEditor.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/Sticky\ Fingers/Windows/WindowManager.swift
+/Users/mandarchaudhari/Documents/Projects/Sticky\ Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky\ Fingers.build/Release/Sticky\ Fingers.build/DerivedSources/GeneratedAssetSymbols.swift

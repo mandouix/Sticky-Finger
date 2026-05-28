@@ -1,0 +1,12 @@
+{
+  "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky Fingers/Views/AllNotesView.swift" : {
+    "abi-baseline-json" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky_Fingers.abi.json",
+    "const-values" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky Fingers-primary.swiftconstvalues",
+    "dependencies" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky Fingers-primary.d",
+    "diagnostics" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky Fingers-primary.dia",
+    "objc-header" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky_Fingers-Swift.h",
+    "swiftdoc" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky_Fingers.swiftdoc",
+    "swiftmodule" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky_Fingers.swiftmodule",
+    "swiftsourceinfo" : "/Users/mandarchaudhari/Documents/Projects/Sticky Fingers/build-release/DerivedData/Build/Intermediates.noindex/Sticky Fingers.build/Release/Sticky Fingers.build/Objects-normal/arm64/Sticky_Fingers.swiftsourceinfo"
+  }
+}
