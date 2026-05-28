@@ -20,6 +20,7 @@ final class EditorBridge: ObservableObject {
 
     @Published var state = FormatState()
     @Published var isWindowHovered = false
+    @Published var isPinned = false
     @Published var scrollTop: CGFloat = 0
     @Published var scrollBottom: CGFloat = 0
     @Published var visibleCharCount: Int = 0
@@ -35,6 +36,9 @@ final class EditorBridge: ObservableObject {
         pendingAccent = css
         exec("document.documentElement.style.setProperty('--accent','\(css)')")
     }
+
+    func blurEditor()  { exec("document.activeElement?.blur()") }
+    func focusEditor() { exec("window.editorAPI?.focus()") }
 
     func toggleBold()        { exec("window.editorAPI.toggleBold()") }
     func toggleItalic()      { exec("window.editorAPI.toggleItalic()") }

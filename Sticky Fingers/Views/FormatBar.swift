@@ -34,6 +34,7 @@ struct FormatBar: View {
         }
         .padding(2)
         .glassEffect(.regular, in: Capsule())
+        .overlay(Capsule().fill(Color.black.opacity(0.18)).allowsHitTesting(false))
         .shadow(color: .black.opacity(0.15), radius: 8, x: 0, y: 4)
     }
 
@@ -51,10 +52,12 @@ struct FormatBar: View {
         .menuStyle(.borderlessButton)
         .menuIndicator(.hidden)
         .frame(width: 32, height: 32)
-        .background(Circle().fill(hovered == index ? Color.primary.opacity(0.1) : Color.clear))
+        .background(Circle().fill(hovered == index ? Color.primary.opacity(0.1) : Color.clear).frame(width: 28, height: 28))
         .clipShape(Circle())
         .onHover { inside in
-            hovered = inside ? index : nil
+            withAnimation(.easeOut(duration: 0.12)) {
+                hovered = inside ? index : nil
+            }
             if inside { NSCursor.pointingHand.push() }
             else { NSCursor.pop() }
         }

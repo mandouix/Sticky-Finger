@@ -6,6 +6,7 @@ final class WindowManager {
 
     private var controllers: [UUID: NoteWindowController] = [:]
     var allNotesController: AllNotesWindowController?
+    var activeNoteID: UUID?
 
     private init() {}
 
@@ -31,8 +32,13 @@ final class WindowManager {
         controllers.removeValue(forKey: noteID)
     }
 
+
     func frame(for noteID: UUID) -> NSRect? {
         controllers[noteID]?.window?.frame
+    }
+
+    func controller(for noteID: UUID) -> NoteWindowController? {
+        controllers[noteID]
     }
 
     /// Returns the actual corner radius macOS is using for note windows.
@@ -45,6 +51,31 @@ final class WindowManager {
 
     func didClose(noteID: UUID) {
         controllers.removeValue(forKey: noteID)
+    }
+
+    func openAllNotesWithSearch(sourceNoteID: UUID) {
+        if allNotesController == nil {
+            allNotesController = AllNotesWindowController(store: NoteStore.shared)
+        }
+        guard let controller = allNotesController else { return }
+        controller.sourceNoteID = sourceNoteID
+
+        let panelSize = controller.window?.frame.size ?? NSSize(width: allNotesPanelWidth, height: 214)
+        let screenFrame = (NSScreen.main ?? NSScreen.screens.first)?.visibleFrame
+            ?? NSRect(x: 0, y: 0, width: 1440, height: 900)
+        let origin: NSPoint
+        if let src = frame(for: sourceNoteID) {
+            let x = src.midX - panelSize.width / 2
+            let y = src.midY - panelSize.height / 2
+            origin = NSPoint(x: max(screenFrame.minX, x), y: max(screenFrame.minY, y))
+        } else {
+            origin = NSPoint(
+                x: screenFrame.midX - panelSize.width / 2,
+                y: screenFrame.midY - panelSize.height / 2
+            )
+        }
+        controller.window?.setFrameOrigin(origin)
+        controller.showWithSearchFocused()
     }
 
     func openAllNotes(sourceNoteID: UUID) {
@@ -97,9 +128,33 @@ final class WindowManager {
         let store = NoteStore.shared
         if store.notes.isEmpty {
             let note = store.add()
+            store.update(id: note.id, content: WindowManager.welcomeContent)
             open(store.note(id: note.id) ?? note)
         } else {
             store.notes.prefix(1).forEach { open($0) }
         }
     }
+
+    private static let welcomeContent = """
+# Welcome to Sticky Fingers
+
+Your lightweight floating notes app for macOS. Notes float above all other windows so they're always in view.
+
+## Shortcuts
+
+⌘N — New note
+
+⌘F — Search all notes
+
+⌘P — Pin / unpin above all windows
+
+⌘Q — Close note
+
+## Tips
+
+- Hover over a note to reveal the toolbar and color picker
+- Select text to bring up the format bar
+- Drag anywhere on the note to reposition it
+- Click the color dot to change the note theme
+"""
 }

@@ -1,4 +1,5 @@
 import SwiftUI
+import AppKit
 
 struct NoteColorPicker: View {
     @Binding var selectedColor: NoteColor
@@ -68,6 +69,11 @@ struct NoteColorPicker: View {
         .scaleEffect(isSelected ? 1.12 : 1.0)
         .animation(.spring(response: 0.2), value: isSelected)
         .onTapGesture {
+            NSHapticFeedbackManager.defaultPerformer.perform(.generic, performanceTime: .now)
+            if let sound = NSSound(named: NSSound.Name("Tink")) {
+                sound.volume = 0.4
+                sound.play()
+            }
             withAnimation(.spring(response: 0.25, dampingFraction: 0.78)) {
                 selectedColor = color
                 isExpanded = false

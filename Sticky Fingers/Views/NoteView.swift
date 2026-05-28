@@ -1,6 +1,16 @@
 import SwiftUI
 import AppKit
 
+private struct HoverBlurModifier: ViewModifier {
+    var opacity: Double
+    var scale: CGFloat
+    var blur: CGFloat
+    var anchor: UnitPoint
+    func body(content: Content) -> some View {
+        content.opacity(opacity).scaleEffect(scale, anchor: anchor).blur(radius: blur)
+    }
+}
+
 struct NoteView: View {
     let noteID: UUID
     @ObservedObject var store: NoteStore
@@ -10,7 +20,6 @@ struct NoteView: View {
     @State private var content: String = ""
     @State private var editorHeight: CGFloat = 56
     @State private var isColorPickerOpen = false
-
     private var note: Note? { store.note(id: noteID) }
     private var noteColor: NoteColor { note?.noteColor ?? .default }
 
@@ -26,6 +35,16 @@ struct NoteView: View {
             // Glass background
             Color.clear
                 .glassEffect(.regular, in: RoundedRectangle(cornerRadius: 24))
+
+            // Dark tint to deepen the glass
+            RoundedRectangle(cornerRadius: 24)
+                .fill(Color.black.opacity(0.08))
+                .allowsHitTesting(false)
+
+            // Soften the glassEffect border stroke
+            RoundedRectangle(cornerRadius: 24)
+                .strokeBorder(Color.black.opacity(0.35), lineWidth: 1)
+                .allowsHitTesting(false)
 
             // Color tint overlay
             if noteColor != .default {
@@ -45,11 +64,18 @@ struct NoteView: View {
                             NoteToolbar(
                                 noteID: noteID,
                                 store: store,
+                                bridge: bridge,
                                 windowController: windowController
                             )
                             .transition(.asymmetric(
-                                insertion: .opacity.combined(with: .scale(scale: 0.9, anchor: .trailing)),
-                                removal:   .opacity.combined(with: .scale(scale: 0.97, anchor: .trailing))
+                                insertion: .modifier(
+                                    active:   HoverBlurModifier(opacity: 0, scale: 1, blur: 12, anchor: .trailing),
+                                    identity: HoverBlurModifier(opacity: 1, scale: 1, blur: 0,  anchor: .trailing)
+                                ),
+                                removal: .modifier(
+                                    active:   HoverBlurModifier(opacity: 0, scale: 1, blur: 4,  anchor: .trailing),
+                                    identity: HoverBlurModifier(opacity: 1, scale: 1, blur: 0,  anchor: .trailing)
+                                )
                             ))
                         }
                     }
@@ -59,7 +85,7 @@ struct NoteView: View {
                     .padding(.trailing, 8)
                     .padding(.bottom, 16)
 
-                    let availableH = max(56, geo.size.height - 56 - 48)
+                    let availableH = max(56, geo.size.height - 56 - 52)
                     let isScrollable = editorHeight > availableH
                     let fadeTop    = isScrollable && bridge.scrollTop > 4
                     let fadeBottom = isScrollable && (bridge.scrollBottom > 4 || bridge.scrollTop < 4)
@@ -84,7 +110,7 @@ struct NoteView: View {
                             .animation(.easeInOut(duration: 0.2), value: fadeBottom)
                         }
                         .padding(.horizontal, 16)
-                        .padding(.bottom, 48)
+                        .padding(.bottom, 52)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .ignoresSafeArea(.all, edges: .top)
@@ -114,13 +140,20 @@ struct NoteView: View {
                     if bridge.isWindowHovered {
                         NoteColorPicker(selectedColor: colorBinding, isExpanded: $isColorPickerOpen)
                             .transition(.asymmetric(
-                                insertion: .opacity.combined(with: .scale(scale: 0.85, anchor: .bottomTrailing)),
-                                removal:   .opacity.combined(with: .scale(scale: 0.97, anchor: .bottomTrailing))
+                                insertion: .modifier(
+                                    active:   HoverBlurModifier(opacity: 0, scale: 1, blur: 12, anchor: .bottomTrailing),
+                                    identity: HoverBlurModifier(opacity: 1, scale: 1, blur: 0,  anchor: .bottomTrailing)
+                                ),
+                                removal: .modifier(
+                                    active:   HoverBlurModifier(opacity: 0, scale: 1, blur: 4,  anchor: .bottomTrailing),
+                                    identity: HoverBlurModifier(opacity: 1, scale: 1, blur: 0,  anchor: .bottomTrailing)
+                                )
                             ))
                     }
                 }
+                .frame(height: 36)
                 .padding(.horizontal, 16)
-                .padding(.bottom, 16)
+                .padding(.bottom, 8)
             }
         }
         // Note title (shown when not hovered and no selection)
@@ -133,11 +166,12 @@ struct NoteView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal, 56)
                     .padding(.top, 16)
-                    .transition(.opacity.combined(with: .scale(scale: 0.96, anchor: .top)))
+                    .transition(.opacity)
             }
         }
-        .animation(.easeOut(duration: 0.2), value: bridge.isWindowHovered)
-        .animation(.easeInOut(duration: 0.15), value: isColorPickerOpen)
+        .environment(\.controlActiveState, .active)
+        .animation(.spring(response: 0.32, dampingFraction: 0.82), value: bridge.isWindowHovered)
+        .animation(.spring(response: 0.28, dampingFraction: 0.75), value: isColorPickerOpen)
         .onAppear {
             content = store.note(id: noteID)?.content ?? ""
             bridge.setAccentColor(noteColor.cssAccent)

@@ -23,8 +23,10 @@ struct AllNotesView: View {
     let sourceNoteID: UUID
     var cornerRadius: CGFloat = 10
     var onHeightChange: ((CGFloat) -> Void)? = nil
+    var autoFocusSearch: Bool = false
 
     @State private var searchText = ""
+    @FocusState private var searchFocused: Bool
 
     private var filtered: [Note] {
         if searchText.isEmpty { return store.notes }
@@ -49,6 +51,7 @@ struct AllNotesView: View {
                 TextField("Search", text: $searchText)
                     .textFieldStyle(.plain)
                     .font(.system(size: 14))
+                    .focused($searchFocused)
             }
             .padding(.horizontal, 10)
             .frame(height: allNotesSearchBarHeight)
@@ -72,6 +75,11 @@ struct AllNotesView: View {
         .glassEffect(.regular, in: RoundedRectangle(cornerRadius: cornerRadius))
         .onAppear {
             onHeightChange?(allNotesPanelHeight(noteCount: filtered.count))
+            if autoFocusSearch {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                    searchFocused = true
+                }
+            }
         }
         .onChange(of: filtered.count) { _, count in
             onHeightChange?(allNotesPanelHeight(noteCount: count))

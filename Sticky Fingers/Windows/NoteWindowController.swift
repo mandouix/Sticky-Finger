@@ -9,7 +9,7 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
     let bridge = EditorBridge()
 
     private let headerHeight: CGFloat = 56
-    private let footerHeight: CGFloat = 48
+    private let footerHeight: CGFloat = 52
     private let webLeft: CGFloat = 16
     private let barH: CGFloat = 40     // panel height (36pt bar + 4pt breathing room)
     private let barHalfW: CGFloat = 80 // clamp margin
@@ -17,6 +17,7 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
     private var formatPanel: NSPanel?
     private var stateCancellable: AnyCancellable?
     private var hoverTimer: Timer?
+    private var appActivationObservers: [NSObjectProtocol] = []
 
     private var isResizingProgrammatically = false
     private var isHeightManuallyReduced = false
@@ -58,6 +59,7 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
         }
 
         setupFormatPanel(in: window)
+        bridge.isPinned = window.isPinned
     }
 
     required init?(coder: NSCoder) { fatalError() }
@@ -96,6 +98,7 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
             if self.bridge.isWindowHovered != hovered {
                 self.bridge.isWindowHovered = hovered
                 self.setTrafficLightsVisible(hovered)
+                if hovered { WindowManager.shared.activeNoteID = self.noteID }
             }
         }
 
@@ -104,6 +107,29 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
             .sink { [weak self] state in
                 self?.updateFormatPanel(state: state)
             }
+
+        let nc = NotificationCenter.default
+        appActivationObservers = [
+            nc.addObserver(forName: NSApplication.didResignActiveNotification,
+                           object: nil, queue: .main) { [weak self] _ in
+                self?.bridge.blurEditor()
+                if self?.bridge.isWindowHovered == true {
+                    (self?.window as? StickyNoteWindow)?.updateCloseButtonForActiveState()
+                }
+            },
+            nc.addObserver(forName: NSApplication.didBecomeActiveNotification,
+                           object: nil, queue: .main) { [weak self] _ in
+                guard let self, let win = self.window else { return }
+                // Make the web view first responder so the cursor is live, then JS-focus the editor.
+                if let webView = bridge.webView {
+                    win.makeFirstResponder(webView)
+                }
+                bridge.focusEditor()
+                if bridge.isWindowHovered {
+                    (win as? StickyNoteWindow)?.updateCloseButtonForActiveState()
+                }
+            }
+        ]
     }
 
     private func updateFormatPanel(state: EditorBridge.FormatState) {
@@ -143,6 +169,10 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
     }
 
     // MARK: - Public
+
+    func togglePin() {
+        bridge.isPinned = window?.togglePin() ?? false
+    }
 
     func setTrafficLightsVisible(_ visible: Bool) {
         (window as? StickyNoteWindow)?.setTrafficLightsVisible(visible)
@@ -190,6 +220,8 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
     func windowWillClose(_ notification: Notification) {
         hoverTimer?.invalidate()
         formatPanel?.close()
+        appActivationObservers.forEach { NotificationCenter.default.removeObserver($0) }
+        appActivationObservers = []
         let note = store.note(id: noteID)
         if note?.content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == true {
             store.delete(id: noteID)

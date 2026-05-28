@@ -35,8 +35,21 @@ final class AllNotesWindowController: NSWindowController, NSWindowDelegate {
 
     required init?(coder: NSCoder) { fatalError() }
 
+    private var pendingSearchFocus = false
+
+    func showWithSearchFocused() {
+        if window?.isVisible == true {
+            window?.close()
+            return
+        }
+        pendingSearchFocus = true
+        showWindow(nil)
+    }
+
     private func updateContent() {
-        var view = AllNotesView(store: store, sourceNoteID: sourceNoteID, cornerRadius: 24)
+        let focus = pendingSearchFocus
+        pendingSearchFocus = false
+        var view = AllNotesView(store: store, sourceNoteID: sourceNoteID, cornerRadius: 24, autoFocusSearch: focus)
         view.onHeightChange = { [weak self] height in
             DispatchQueue.main.async { self?.resizePanel(toHeight: height) }
         }
