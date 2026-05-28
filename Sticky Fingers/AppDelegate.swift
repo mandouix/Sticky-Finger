@@ -25,8 +25,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func setupStatusItem() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         if let button = statusItem?.button {
-            button.image = NSImage(systemSymbolName: "text.document.fill", accessibilityDescription: "Sticky Fingers")
-            button.image?.isTemplate = true
+            let config = NSImage.SymbolConfiguration(hierarchicalColor: .labelColor)
+            button.image = NSImage(systemSymbolName: "document.on.document.fill", accessibilityDescription: "Sticky Fingers")?
+                .withSymbolConfiguration(config)
         }
 
         let menu = NSMenu()
