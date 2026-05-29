@@ -14,9 +14,9 @@
         https://github.com/mandouix/sticky-fingers/releases/tag/v1.0.1
       </sparkle:releaseNotesLink>
       <enclosure
-        url="https://github.com/mandouix/sticky-fingers/releases/download/v1.0.0/StickyFingers.zip"
-        sparkle:edDSASignature="ao8IrdtJtImri5XBad6I1VSMnyj/n4GHZPhKLToIrDJqfc1YG251enFY+rVrDzCzTBak0C9Qqg1+gPQCSaozAg=="
-        length="1958819"
+        url="https://github.com/mandouix/Sticky-Finger/releases/tag/v1.0.1"
+        sparkle:edDSASignature="4FG4/W4JEUS0Ebvvm4tV2eFm6XVEa5iEVZuR1ww6Bwlu6w8p4oTSE7w198Q2WxyPt7ABsJi2FXXBgEchIiXgBw=="
+        length="1959526"
         type="application/octet-stream" />
     </item>
   </channel>
