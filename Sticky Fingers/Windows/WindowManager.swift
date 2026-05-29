@@ -112,14 +112,29 @@ final class WindowManager {
         }
     }
 
-    // Called from AllNotesView when user selects a note
-    func selectNote(_ selectedID: UUID, replacing sourceNoteID: UUID) {
-        let sourceFrame = frame(for: sourceNoteID)
+    // Called from AllNotesView when user selects a note — opens it in its own window.
+    func selectNote(_ selectedID: UUID, from sourceNoteID: UUID) {
         allNotesController?.window?.close()
-        close(noteID: sourceNoteID)
-
         guard let note = NoteStore.shared.note(id: selectedID) else { return }
-        open(note, at: sourceFrame)
+
+        // Already open → just bring it forward.
+        if controllers[selectedID] != nil {
+            open(note)
+            return
+        }
+
+        // Cascade the new window down-right from the source so it doesn't fully overlap.
+        var newFrame: NSRect?
+        if let src = frame(for: sourceNoteID), selectedID != sourceNoteID {
+            let offset: CGFloat = 28
+            var origin = NSPoint(x: src.minX + offset, y: src.minY - offset)
+            if let vis = (NSScreen.main ?? NSScreen.screens.first)?.visibleFrame {
+                origin.x = min(max(origin.x, vis.minX), vis.maxX - src.width)
+                origin.y = max(origin.y, vis.minY)
+            }
+            newFrame = NSRect(origin: origin, size: src.size)
+        }
+        open(note, at: newFrame)
     }
 
     // MARK: - Open all existing notes on launch

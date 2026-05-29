@@ -1,0 +1,8 @@
+schemaVersion: 1
+enabledWorkflows:
+  - macos
+sessionDefaults:
+  projectPath: /Users/mandarchaudhari/Documents/Projects/Sticky Fingers/Sticky
+    Fingers.xcodeproj
+  scheme: Sticky Fingers
+  configuration: Debug

@@ -121,7 +121,14 @@ private struct NoteRow: View {
                 WindowManager.shared.close(noteID: note.id)
                 if wasSource {
                     let newNote = NoteStore.shared.add()
-                    WindowManager.shared.open(newNote, at: sourceFrame)
+                    // New notes always open at the default minimum size, anchored to the
+                    // source's top-left so they stay where the user was looking.
+                    let defaultSize = NSSize(width: 320, height: 180)
+                    let newFrame = sourceFrame.map {
+                        NSRect(x: $0.minX, y: $0.maxY - defaultSize.height,
+                               width: defaultSize.width, height: defaultSize.height)
+                    }
+                    WindowManager.shared.open(newNote, at: newFrame)
                 }
             } label: {
                 Image(systemName: "trash")
@@ -141,7 +148,7 @@ private struct NoteRow: View {
         .contentShape(Rectangle())
         .onHover { h in withAnimation(.easeOut(duration: 0.15)) { isHovered = h } }
         .onTapGesture {
-            WindowManager.shared.selectNote(note.id, replacing: sourceNoteID)
+            WindowManager.shared.selectNote(note.id, from: sourceNoteID)
         }
     }
 }

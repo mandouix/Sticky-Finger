@@ -66,6 +66,6 @@ final class NoteStore: ObservableObject {
 
     private func persist() {
         guard let data = try? JSONEncoder().encode(notes) else { return }
-        try? data.write(to: saveURL)
+        try? data.write(to: saveURL, options: .atomic)
     }
 }

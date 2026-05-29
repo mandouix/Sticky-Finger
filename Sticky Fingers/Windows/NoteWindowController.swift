@@ -222,8 +222,9 @@ final class NoteWindowController: NSWindowController, NSWindowDelegate {
         formatPanel?.close()
         appActivationObservers.forEach { NotificationCenter.default.removeObserver($0) }
         appActivationObservers = []
-        let note = store.note(id: noteID)
-        if note?.content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == true {
+        // Discard the note if it was left blank rather than persisting an empty entry.
+        if let note = store.note(id: noteID),
+           note.content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             store.delete(id: noteID)
         }
         WindowManager.shared.didClose(noteID: noteID)
