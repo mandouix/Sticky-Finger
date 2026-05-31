@@ -151,7 +151,7 @@ final class WindowManager {
     }
 
     private static let welcomeContent = """
-# Welcome to Sticky Fingers
+# Welcome to Sticky Finger
 
 Your lightweight floating notes app for macOS. Notes float above all other windows so they're always in view.
 

@@ -2,7 +2,7 @@
 set -e
 
 # ─────────────────────────────────────────────
-# Sticky Fingers — Release Script
+# Sticky Finger — Release Script
 # Usage: ./release.sh 1.0.1
 #
 # Builds a Release .app and zips it for manual
@@ -22,11 +22,11 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT="$SCRIPT_DIR/Sticky Fingers.xcodeproj"
 PLIST="$SCRIPT_DIR/Sticky Fingers/Info.plist"
 BUILD_DIR="$SCRIPT_DIR/build-release"
-ZIP_NAME="StickyFingers.zip"
+ZIP_NAME="StickyFinger.zip"
 
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "  Releasing Sticky Fingers v$VERSION"
+echo "  Releasing Sticky Finger v$VERSION"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 
@@ -51,14 +51,14 @@ xcodebuild \
     DEPLOYMENT_LOCATION=NO \
     BUILD_DIR="$BUILD_DIR" \
     build
-APP_PATH="$BUILD_DIR/Release/Sticky Fingers.app"
+APP_PATH="$BUILD_DIR/Release/Sticky Finger.app"
 echo "  Built: $APP_PATH"
 
 # Step 3: Zip the .app
 echo ""
 echo "Step 3: Zipping app..."
 cd "$BUILD_DIR/Release"
-ditto -c -k --keepParent "Sticky Fingers.app" "$ZIP_NAME"
+ditto -c -k --keepParent "Sticky Finger.app" "$ZIP_NAME"
 ZIP_PATH="$BUILD_DIR/Release/$ZIP_NAME"
 FILE_SIZE=$(stat -f%z "$ZIP_PATH")
 echo "  Created: $ZIP_PATH ($FILE_SIZE bytes)"

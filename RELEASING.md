@@ -1,6 +1,6 @@
-# How to Release a New Version of Sticky Fingers
+# How to Release a New Version of Sticky Finger
 
-Sticky Fingers is distributed as a manual download. There is no in-app
+Sticky Finger is distributed as a manual download. There is no in-app
 auto-update — users download each new version and replace the app
 themselves. Follow these steps to ship an update.
 
@@ -29,12 +29,12 @@ Type this, replacing `1.0.3` with your new version number:
 It will automatically:
 - Update the version number in the app
 - Build a Release version of the app
-- Zip it into `StickyFingers.zip`
+- Zip it into `StickyFinger.zip`
 - Print the version, build number, and file size
 
 The zip is created at:
 ```
-~/Documents/Projects/Sticky Fingers/build-release/Release/StickyFingers.zip
+~/Documents/Projects/Sticky Fingers/build-release/Release/StickyFinger.zip
 ```
 
 ---
@@ -44,9 +44,9 @@ The zip is created at:
 1. Go to `https://github.com/mandouix/Sticky-Finger/releases`
 2. Click **Draft a new release**
 3. In the **Tag version** field, type: `v1.0.3` (use your version number)
-4. In the **Release title** field, type: `Sticky Fingers 1.0.3`
+4. In the **Release title** field, type: `Sticky Finger 1.0.3`
 5. Write a short description of what changed
-6. Click **Attach binaries by dropping them here** and upload `StickyFingers.zip`
+6. Click **Attach binaries by dropping them here** and upload `StickyFinger.zip`
 7. Click **Publish release**
 
 ---
@@ -65,7 +65,7 @@ git push
 ### Step 5 — Tell your users
 
 Point users at the latest release page so they can download the new
-version. To update, they quit Sticky Fingers, drag the new app into
+version. To update, they quit Sticky Finger, drag the new app into
 `/Applications` (replacing the old one), and reopen it.
 
 ---

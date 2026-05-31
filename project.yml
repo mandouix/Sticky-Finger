@@ -1,4 +1,4 @@
-name: New Sticky
+name: Sticky Finger
 options:
   bundleIdPrefix: com.mandarchaudhari
   deploymentTarget:
@@ -7,21 +7,23 @@ options:
   groupSortPosition: top
 
 targets:
-  New Sticky:
+  Sticky Finger:
     type: application
     platform: macOS
     deploymentTarget: "26.0"
+    # NOTE: the source files still physically live in the "Sticky Fingers"
+    # folder; only the product/brand name was changed to "Sticky Finger".
     sources:
-      - path: New Sticky
+      - path: Sticky Fingers
         excludes:
           - "**/.DS_Store"
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.mandarchaudhari.newsticky
-        PRODUCT_NAME: "New Sticky"
+        PRODUCT_BUNDLE_IDENTIFIER: com.mandarchaudhari.stickyfinger
+        PRODUCT_NAME: "Sticky Finger"
         SWIFT_VERSION: 5.9
         MACOSX_DEPLOYMENT_TARGET: "26.0"
-        INFOPLIST_FILE: "New Sticky/Info.plist"
+        INFOPLIST_FILE: "Sticky Fingers/Info.plist"
         GENERATE_INFOPLIST_FILE: NO
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor

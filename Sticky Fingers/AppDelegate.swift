@@ -23,7 +23,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         if let button = statusItem?.button {
             let config = NSImage.SymbolConfiguration(hierarchicalColor: .labelColor)
-            button.image = NSImage(systemSymbolName: "document.on.document.fill", accessibilityDescription: "Sticky Fingers")?
+            button.image = NSImage(systemSymbolName: "document.on.document.fill", accessibilityDescription: "Sticky Finger")?
                 .withSymbolConfiguration(config)
         }
 
@@ -45,7 +45,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
         menu.addItem(.separator())
 
-        menu.addItem(withTitle: "Quit Sticky Fingers", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+        menu.addItem(withTitle: "Quit Sticky Finger", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
 
         statusItem?.menu = menu
     }
@@ -102,7 +102,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc private func sendFeedback() {
         let to = "mandar.chaudhari98@gmail.com"
-        let subject = "Sticky Fingers Feedback"
+        let subject = "Sticky Finger Feedback"
             .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         if let url = URL(string: "mailto:\(to)?subject=\(subject)") {
             NSWorkspace.shared.open(url)

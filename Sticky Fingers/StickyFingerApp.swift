@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct NewStickyApp: App {
+struct StickyFingerApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
