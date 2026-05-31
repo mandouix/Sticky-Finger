@@ -4,6 +4,11 @@ set -e
 # ─────────────────────────────────────────────
 # Sticky Fingers — Release Script
 # Usage: ./release.sh 1.0.1
+#
+# Builds a Release .app and zips it for manual
+# distribution via GitHub Releases. (Sparkle
+# auto-update was removed — users download and
+# replace the app themselves.)
 # ─────────────────────────────────────────────
 
 VERSION=$1
@@ -16,7 +21,6 @@ fi
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT="$SCRIPT_DIR/Sticky Fingers.xcodeproj"
 PLIST="$SCRIPT_DIR/Sticky Fingers/Info.plist"
-SIGN_UPDATE="$SCRIPT_DIR/Frameworks/sparkle-bin/sign_update"
 BUILD_DIR="$SCRIPT_DIR/build-release"
 ZIP_NAME="StickyFingers.zip"
 
@@ -29,7 +33,7 @@ echo ""
 # Step 1: Bump version in Info.plist
 echo "Step 1: Bumping version to $VERSION..."
 /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSION" "$PLIST"
-# Increment CFBundleVersion as an integer build number (YYYYMMDD-based)
+# Increment CFBundleVersion as an integer build number (YYYYMMDDHHMM-based)
 BUILD_NUMBER=$(date +%Y%m%d%H%M)
 /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $BUILD_NUMBER" "$PLIST"
 echo "  CFBundleShortVersionString = $VERSION"
@@ -59,23 +63,13 @@ ZIP_PATH="$BUILD_DIR/Release/$ZIP_NAME"
 FILE_SIZE=$(stat -f%z "$ZIP_PATH")
 echo "  Created: $ZIP_PATH ($FILE_SIZE bytes)"
 
-# Step 4: Sign the zip with Sparkle
-echo ""
-echo "Step 4: Signing zip with EdDSA key..."
-chmod +x "$SIGN_UPDATE"
-SIGNATURE=$("$SIGN_UPDATE" "$ZIP_PATH" 2>/dev/null | grep -o 'sparkle:edDSASignature="[^"]*"' | sed 's/sparkle:edDSASignature="//;s/"//')
-if [ -z "$SIGNATURE" ]; then
-    # Try alternate output format
-    SIGNATURE=$("$SIGN_UPDATE" "$ZIP_PATH" 2>&1)
-fi
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "  DONE — copy these values into appcast.xml:"
+echo "  DONE"
 echo ""
 echo "  Version:   $VERSION"
 echo "  Build:     $BUILD_NUMBER"
 echo "  File size: $FILE_SIZE"
-echo "  Signature: $SIGNATURE"
 echo ""
 echo "  Zip file is at:"
 echo "  $ZIP_PATH"
@@ -83,8 +77,8 @@ echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 echo "  Next steps:"
-echo "  1. Upload $ZIP_NAME to GitHub Releases as v$VERSION"
-echo "  2. Copy the signature above into appcast.xml"
-echo "  3. Update the version and URL in appcast.xml"
-echo "  4. Push appcast.xml to GitHub"
+echo "  1. Create a new GitHub Release tagged v$VERSION"
+echo "  2. Upload $ZIP_NAME as a release asset"
+echo "  3. Write release notes describing what changed"
+echo "  4. Users download the new version and replace the app manually"
 echo ""

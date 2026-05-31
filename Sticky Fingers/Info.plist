@@ -30,13 +30,5 @@
 	<string>Copyright © 2026 Mandar Chaudhari. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>SUEnableAutomaticChecks</key>
-	<true/>
-	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/mandouix/Sticky-Finger/main/appcast.xml</string>
-	<key>SUPublicEDKey</key>
-	<string>NhF7knpkB2rku/G6y8hKXE9iGPMIeG3wP8+SQfU+s+4=</string>
-	<key>SUScheduledCheckInterval</key>
-	<integer>86400</integer>
 </dict>
 </plist>

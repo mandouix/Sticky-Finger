@@ -1,15 +1,12 @@
 import AppKit
-import Sparkle
 
 @MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
 
     private var statusItem: NSStatusItem?
-    private var updaterController: SPUStandardUpdaterController!
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.appearance = NSAppearance(named: .darkAqua)
-        updaterController = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
         NSApp.setActivationPolicy(.accessory)
         setupStatusItem()
         setupKeyboardShortcuts()
@@ -41,14 +38,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(allNotesItem)
 
         menu.addItem(.separator())
-
-        let checkForUpdatesItem = NSMenuItem(
-            title: "Check for Updates\u{2026}",
-            action: #selector(SPUStandardUpdaterController.checkForUpdates(_:)),
-            keyEquivalent: ""
-        )
-        checkForUpdatesItem.target = updaterController
-        menu.addItem(checkForUpdatesItem)
 
         let feedbackItem = NSMenuItem(title: "Send Feedback\u{2026}", action: #selector(sendFeedback), keyEquivalent: "")
         feedbackItem.target = self

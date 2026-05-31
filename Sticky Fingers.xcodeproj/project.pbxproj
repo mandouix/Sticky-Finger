@@ -30,8 +30,6 @@
 		C7EAD158786E746511254088 /* editor.html in Resources */ = {isa = PBXBuildFile; fileRef = AF10E76D9B0B87581620FE2E /* editor.html */; };
 		CB1F878C20EDB6510349A3DA /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB390770D1159AC231DCA6F /* NoteView.swift */; };
 		D4E911A127BC40D1A8856163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2433E7666D45C8C4A9B2349F /* Assets.xcassets */; };
-		AA11BB22CC33DD44EE55FF06 /* Sparkle.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA11BB22CC33DD44EE55FF05 /* Sparkle.xcframework */; };
-		AA11BB22CC33DD44EE55FF07 /* Sparkle.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA11BB22CC33DD44EE55FF05 /* Sparkle.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,7 +39,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AA11BB22CC33DD44EE55FF07 /* Sparkle.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,7 +71,6 @@
 		E5B134727E6506061301F27B /* NSWindow+Sticky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSWindow+Sticky.swift"; sourceTree = "<group>"; };
 		E6018EB4E4FBF6BE88A2406C /* AllNotesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotesWindowController.swift; sourceTree = "<group>"; };
 		F279ABCC7C4FA95DACEE60A6 /* StickyNoteWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyNoteWindow.swift; sourceTree = "<group>"; };
-		AA11BB22CC33DD44EE55FF05 /* Sparkle.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Sparkle.xcframework; path = Frameworks/Sparkle.xcframework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA11BB22CC33DD44EE55FF06 /* Sparkle.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +164,6 @@
 		AA11BB22CC33DD44EE55FF08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AA11BB22CC33DD44EE55FF05 /* Sparkle.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
