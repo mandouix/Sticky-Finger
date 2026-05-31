@@ -43,8 +43,6 @@ A few key pieces:
   ```
   ~/Library/Application Support/Sticky Finger/notes.json
   ```
-  (Notes from older versions, which used a "New Sticky" folder, are migrated
-  automatically.)
 - **`WindowManager`** — creates and tracks one floating note window per note.
 - **`TiptapEditor` / `EditorBridge`** — host the web-based editor and shuttle
   content and formatting commands between Swift and JavaScript.

@@ -15,20 +15,7 @@ final class NoteStore: ObservableObject {
         let dir = appSupport.appendingPathComponent("Sticky Finger", isDirectory: true)
         try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
         saveURL = dir.appendingPathComponent("notes.json")
-        Self.migrateLegacyStoreIfNeeded(into: saveURL, appSupport: appSupport)
         load()
-    }
-
-    /// Move notes saved by older versions (which used a "New Sticky" folder) into
-    /// the current location, so existing notes survive the rename.
-    private static func migrateLegacyStoreIfNeeded(into saveURL: URL, appSupport: URL) {
-        let fm = FileManager.default
-        guard !fm.fileExists(atPath: saveURL.path) else { return }
-        let legacy = appSupport
-            .appendingPathComponent("New Sticky", isDirectory: true)
-            .appendingPathComponent("notes.json")
-        guard fm.fileExists(atPath: legacy.path) else { return }
-        try? fm.copyItem(at: legacy, to: saveURL)
     }
 
     func add() -> Note {
