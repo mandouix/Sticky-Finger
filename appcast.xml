@@ -6,16 +6,16 @@
     <description>Most recent updates to Sticky Fingers</description>
     <language>en</language>
     <item>
-      <title>Version 1.0.1</title>
-      <pubDate>Wed, 28 May 2026 00:00:00 +0000</pubDate>
+      <title>Version 1.0.2</title>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
       <sparkle:version>1</sparkle:version>
-      <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+      <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
       <sparkle:releaseNotesLink>
         https://github.com/mandouix/sticky-fingers/releases/tag/v1.0.1
       </sparkle:releaseNotesLink>
       <enclosure
-        url="https://github.com/mandouix/Sticky-Finger/releases/tag/v1.0.1"
-        sparkle:edDSASignature="4FG4/W4JEUS0Ebvvm4tV2eFm6XVEa5iEVZuR1ww6Bwlu6w8p4oTSE7w198Q2WxyPt7ABsJi2FXXBgEchIiXgBw=="
+        url="https://github.com/mandouix/Sticky-Finger/releases/tag/v1.0.2"
+        sparkle:edDSASignature="S2+mjfsVv2/cz3r4/MAnBfxRKRF8WMbGHnOd1wvMB376ErLtbHQZOmgpELMl0PmKJvcuLpPcxahrnHhMPY/EBA=="
         length="1959526"
         type="application/octet-stream" />
     </item>
