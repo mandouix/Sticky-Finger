@@ -19,8 +19,8 @@ if [ -z "$VERSION" ]; then
 fi
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-PROJECT="$SCRIPT_DIR/Sticky Fingers.xcodeproj"
-PLIST="$SCRIPT_DIR/Sticky Fingers/Info.plist"
+PROJECT="$SCRIPT_DIR/Sticky Finger.xcodeproj"
+PLIST="$SCRIPT_DIR/Sticky Finger/Info.plist"
 BUILD_DIR="$SCRIPT_DIR/build-release"
 ZIP_NAME="StickyFinger.zip"
 
@@ -45,7 +45,7 @@ echo "Step 2: Building Release app..."
 rm -rf "$BUILD_DIR"
 xcodebuild \
     -project "$PROJECT" \
-    -scheme "Sticky Fingers" \
+    -scheme "Sticky Finger" \
     -configuration Release \
     -derivedDataPath "$BUILD_DIR/DerivedData" \
     DEPLOYMENT_LOCATION=NO \

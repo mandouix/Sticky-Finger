@@ -92,10 +92,8 @@ Quit the app entirely from the menu-bar icon → **Quit Sticky Finger**.
 **Requirements:** macOS 26 or later and a matching version of Xcode.
 
 1. Clone the repository.
-2. Open `Sticky Fingers.xcodeproj` in Xcode. (The Xcode project file and the
-   source folder still carry the original `Sticky Fingers` name; only the
-   product/brand was renamed to **Sticky Finger**.)
-3. Select the **Sticky Fingers** scheme and press **Run** (⌘R). The app it
+2. Open `Sticky Finger.xcodeproj` in Xcode.
+3. Select the **Sticky Finger** scheme and press **Run** (⌘R). The app it
    produces is **Sticky Finger.app**.
 
 To produce a distributable build, run the release script with a version

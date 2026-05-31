@@ -55,7 +55,7 @@ The zip is created at:
 
 Back in Terminal:
 ```
-git add "Sticky Fingers/Info.plist"
+git add "Sticky Finger/Info.plist"
 git commit -m "Release v1.0.3"
 git push
 ```
