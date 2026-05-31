@@ -1,8 +1,12 @@
 # Sticky Finger
 
+![Sticky Finger banner](docs/banner.png)
+
 A lightweight sticky-notes app for macOS that lives in your menu bar. Jot
 down anything in a floating note that stays out of your way, formats text
 beautifully, and is always one keystroke away.
+
+**Website:** [mandarchaudhari.com/sticky-finger](https://mandarchaudhari.com/sticky-finger)
 
 ---
 
