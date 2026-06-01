@@ -46,6 +46,10 @@ struct TiptapEditor: NSViewRepresentable {
         var isLoaded = false
         var isUpdatingFromJS = false
         var lastSyncedText = ""
+        // Set when we push non-empty content into a fresh editor. The editor fires a
+        // spurious empty onUpdate while it parses that content; this flag lets us drop
+        // that one empty echo so it can't clobber a note that has real content.
+        var expectingInitEcho = false
         var bridge: EditorBridge?
 
         init(text: Binding<String>, editorHeight: Binding<CGFloat>) {
@@ -67,6 +71,9 @@ struct TiptapEditor: NSViewRepresentable {
         func pushContent(_ markdown: String, to webView: WKWebView, `init` isInit: Bool) {
             guard let json = try? JSONEncoder().encode(markdown),
                   let jsonStr = String(data: json, encoding: .utf8) else { return }
+            // When pushing real content, expect one spurious empty echo from the
+            // editor as it parses the markdown — drop it in the message handler.
+            expectingInitEcho = !markdown.isEmpty
             let call = isInit
                 ? "window.editorAPI.initEditor(\(jsonStr))"
                 : "window.editorAPI.setMarkdown(\(jsonStr))"
@@ -115,8 +122,16 @@ struct TiptapEditor: NSViewRepresentable {
             defer { isUpdatingFromJS = false }
 
             if let content = body["content"] as? String {
-                lastSyncedText = content
-                text.wrappedValue = content
+                // Drop the single spurious empty echo that the editor emits right
+                // after we push real content into it during (re)load. Without this,
+                // that empty value would overwrite the note's saved content.
+                if expectingInitEcho && content.isEmpty && !lastSyncedText.isEmpty {
+                    expectingInitEcho = false
+                } else {
+                    expectingInitEcho = false
+                    lastSyncedText = content
+                    text.wrappedValue = content
+                }
             }
             if let height = body["height"] as? Double {
                 let h = max(56, CGFloat(height))

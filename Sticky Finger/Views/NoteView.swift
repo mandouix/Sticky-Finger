@@ -18,6 +18,7 @@ struct NoteView: View {
     @ObservedObject var bridge: EditorBridge
 
     @State private var content: String = ""
+    @State private var didLoadContent = false
     @State private var editorHeight: CGFloat = 56
     @State private var isColorPickerOpen = false
     private var note: Note? { store.note(id: noteID) }
@@ -174,9 +175,13 @@ struct NoteView: View {
         .animation(.spring(response: 0.28, dampingFraction: 0.75), value: isColorPickerOpen)
         .onAppear {
             content = store.note(id: noteID)?.content ?? ""
+            didLoadContent = true
             bridge.setAccentColor(noteColor.cssAccent)
         }
         .onChange(of: content) { _, newValue in
+            // Don't write back until the saved content has loaded — otherwise the
+            // initial empty editor state can clobber a note that has real content.
+            guard didLoadContent else { return }
             store.update(id: noteID, content: newValue)
         }
         .onChange(of: editorHeight) { _, newH in
