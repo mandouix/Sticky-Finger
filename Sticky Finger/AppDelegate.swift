@@ -32,9 +32,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func setupStatusItem() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         if let button = statusItem?.button {
-            let config = NSImage.SymbolConfiguration(hierarchicalColor: .labelColor)
-            button.image = NSImage(systemSymbolName: "document.on.document.fill", accessibilityDescription: "Sticky Finger")?
-                .withSymbolConfiguration(config)
+            let image = NSImage(named: "MenuBarIcon")
+            image?.isTemplate = true   // tint to match the menu bar (adapts to light/dark)
+            image?.size = NSSize(width: 16, height: 16)
+            button.image = image
+            button.image?.accessibilityDescription = "Sticky Finger"
         }
 
         let menu = NSMenu()
