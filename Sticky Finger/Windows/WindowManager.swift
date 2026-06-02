@@ -137,6 +137,17 @@ final class WindowManager {
         open(note, at: newFrame)
     }
 
+    // MARK: - Reopen behaviour
+
+    /// Reopens the most recently edited note in its own window. Called when the app is
+    /// relaunched (e.g. from Launchpad) with no note windows open. Falls back to creating
+    /// a new note if the store is empty.
+    func reopenMostRecentNote() {
+        let store = NoteStore.shared
+        let note = store.notes.max(by: { $0.updatedAt < $1.updatedAt }) ?? store.add()
+        open(note)
+    }
+
     // MARK: - Open all existing notes on launch
 
     func openAllExistingNotes() {

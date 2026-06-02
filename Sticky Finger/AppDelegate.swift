@@ -17,6 +17,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         false
     }
 
+    /// Called when the app is relaunched while already running (e.g. from Launchpad or the
+    /// Dock). When no note windows are open, bring back the most recently edited note so the
+    /// user always lands somewhere instead of nothing happening.
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        if !flag {
+            WindowManager.shared.reopenMostRecentNote()
+        }
+        return true
+    }
+
     // MARK: - Status Item
 
     private func setupStatusItem() {
