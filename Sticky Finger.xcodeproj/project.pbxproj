@@ -30,6 +30,7 @@
 		C7EAD158786E746511254088 /* editor.html in Resources */ = {isa = PBXBuildFile; fileRef = AF10E76D9B0B87581620FE2E /* editor.html */; };
 		CB1F878C20EDB6510349A3DA /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB390770D1159AC231DCA6F /* NoteView.swift */; };
 		D4E911A127BC40D1A8856163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2433E7666D45C8C4A9B2349F /* Assets.xcassets */; };
+		FACE01D2C0FFEE0011223355 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = FACE01D2C0FFEE0011223344 /* AppIcon.icon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		2433E7666D45C8C4A9B2349F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FACE01D2C0FFEE0011223344 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		28695A3E911F1B6B1290EDE3 /* MarkdownTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTheme.swift; sourceTree = "<group>"; };
 		32D656F27C981395910DFAB0 /* StickyFingerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyFingerApp.swift; sourceTree = "<group>"; };
 		4859477BE1437EB7CC66244D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				85BDC4B87A548E74E4B35031 /* Views */,
 				F20AC3514979867D0A024923 /* Windows */,
 				4859477BE1437EB7CC66244D /* AppDelegate.swift */,
+				FACE01D2C0FFEE0011223344 /* AppIcon.icon */,
 				2433E7666D45C8C4A9B2349F /* Assets.xcassets */,
 				A142AA7271A174DF72E2CF60 /* Info.plist */,
 				32D656F27C981395910DFAB0 /* StickyFingerApp.swift */,
@@ -245,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACE01D2C0FFEE0011223355 /* AppIcon.icon in Resources */,
 				D4E911A127BC40D1A8856163 /* Assets.xcassets in Resources */,
 				C7EAD158786E746511254088 /* editor.html in Resources */,
 				BC0B9BC901BEB0F08EA5ED5F /* tiptap.min.js in Resources */,
